@@ -1,0 +1,1683 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>视觉参考图鉴 · 怪想实验室</title>
+<style>
+:root{color-scheme:light;--ink:#171d22;--muted:#555a59;--paper:#f6f4ed;--line:#d7d5ca;--blue:#164bd1;--stage:#101827}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer;color:inherit}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:3px}main,.top,footer{width:min(1180px,calc(100% - 72px));margin:auto}.top{height:59px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);letter-spacing:.12em;font-size:12px;font-weight:750}.top strong{display:flex;align-items:center;gap:10px}.dot{display:inline-grid;place-items:center;width:18px;height:18px;background:var(--blue);color:white;border-radius:50%;font-size:11px}.edition,.mono,.micro,.en,.index,.status,.count{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.edition{color:var(--muted)}header{padding:29px 0 23px;display:flex;justify-content:space-between;align-items:end;gap:20px}.micro{font-size:11px;letter-spacing:.15em;color:var(--blue);font-weight:800;margin:0 0 6px}h1{font-size:clamp(34px,5vw,59px);line-height:1.13;letter-spacing:-.045em;margin:0 0 8px;font-weight:850}header p:last-child{margin:0;color:var(--muted)}.counter{display:flex;align-items:baseline;gap:9px;white-space:nowrap;font-size:12px;color:var(--muted)}.counter b{font:700 43px/1 ui-monospace,monospace;color:var(--blue);letter-spacing:-.09em}.controls{border-block:1px solid var(--line);padding:11px 0;display:flex;gap:9px;align-items:center;flex-wrap:wrap}.search{display:flex;flex:1 1 245px;min-width:0;align-items:center;gap:9px;padding:0 10px;background:#fff;border:1px solid var(--line);border-radius:5px;height:38px;color:var(--muted)}input{width:100%;min-width:0;border:0;background:transparent;padding:6px 0;outline:none!important}.search:focus-within{outline:2px solid var(--blue);outline-offset:2px}button{border:1px solid var(--line);background:transparent;border-radius:4px;padding:6px 10px;font-size:13px}button:hover{border-color:var(--blue);color:var(--blue)}button[aria-pressed=true]{border-color:var(--blue);color:var(--blue);background:#e6ecfd}.filters{display:flex;gap:5px;flex-wrap:wrap}.actions{margin-left:auto;display:flex;gap:5px}.rail{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px;padding:12px 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{min-width:0;border:1px solid var(--line);background:#fffefa;border-radius:6px;overflow:hidden}.card[hidden],.empty[hidden]{display:none}.stage{position:relative;background:var(--stage);overflow:hidden}.stage canvas{width:100%;height:auto;display:block}.stage .meter{height:2px;background:#416bea;width:100%;position:absolute;bottom:0;left:0;transform-origin:left;pointer-events:none}.meta{padding:11px 13px 0;display:flex;gap:6px;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px}.index{color:var(--blue)}.fav{border:0;font-size:18px;padding:0 3px;line-height:1.15;min-width:26px}.body{padding:4px 13px 12px}h2{font-size:22px;line-height:1.18;letter-spacing:-.025em;margin:0}.en{font-size:11px;color:var(--muted);margin:4px 0 6px}.description{margin:0;min-height:3.1em;font-size:13px}.links{padding:8px 13px;display:flex;justify-content:space-between;align-items:center;gap:5px;border-top:1px solid #edeae2}.links button{color:var(--blue);background:#f0f3ff;border-color:#dee5ff;white-space:nowrap}.links a{font-size:12px;text-underline-offset:3px;color:var(--muted);white-space:nowrap}.empty{border:1px dashed var(--line);padding:33px 18px;text-align:center;color:var(--muted)}#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#181f28;color:#fff;padding:9px 14px;border-radius:5px;font-size:13px;z-index:3}footer{border-top:1px solid var(--line);margin-top:17px;padding:13px 0 24px;color:var(--muted);font-size:11px}footer a{text-underline-offset:2px}
+@media(max-width:1000px){main,.top,footer{width:calc(100% - 44px)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:580px){main,.top,footer{width:calc(100% - 28px)}header{padding-top:22px}.counter{display:none}.grid{grid-template-columns:1fr}.top{height:47px}.controls{align-items:stretch}.search{flex-basis:100%}.actions{margin-left:0}.rail{font-size:11px}}
+.shelves{display:flex;gap:7px;margin-bottom:8px}.shelves button{letter-spacing:.025em;font-weight:650}.card.featured .description{min-height:3.25em}.credit{font-size:11px;color:#555a59;padding-top:5px}.featuretag{font-size:11px;color:#754327;padding:1px 5px;border-radius:2px;background:#f1e9d9}.stage .meter{background:#c26e43}.shelves{flex-wrap:wrap}.beats{display:flex;gap:5px;padding:7px 12px;border-bottom:1px solid #edeae2}.beats button{font-size:11px;padding:4px 6px;white-space:nowrap;background:#f6f3e9}.beats button[aria-pressed=true]{background:#e6ecfd;border-color:var(--blue)}.study .featuretag{background:#f1e5d4}.stage canvas{aspect-ratio:auto}.card[data-id=s04] .stage{background:#e9e1d0}.card[data-id=s04] .stage canvas{background:#e9e1d0}.beats{flex-wrap:wrap}.beats button[aria-label$="：重播"]{color:#2847a6;border-color:#b2bfe2}.stage{aspect-ratio:9/5;background:#262e30;display:grid;place-items:center}.stage canvas{width:100%;height:100%;object-fit:contain}.stage .preview{position:absolute;right:9px;bottom:9px;z-index:1;padding:5px 9px;background:#fffdf2;color:#263531;border-color:#fffdf2;box-shadow:0 1px 7px #101c3050}.card{display:flex;flex-direction:column}.card .links{margin-top:auto}.card.base .stage{background:#e9e6dd}.card.base .featuretag{color:#526259;background:#e9eee6}.template{margin:0 13px 8px;color:#535d55;font-size:12px}.template summary{cursor:pointer;font-weight:650}.template p{margin:6px 0 0;white-space:normal}.card .source-note{font-size:11px;color:#58665e}
+.stage .meter{visibility:hidden}.stage.is-playing .meter{visibility:visible}</style></head>
+<body><div class="top"><strong><span class="dot" aria-hidden="true">✦</span> 怪想实验室</strong><span class="edition">MOTION ATLAS / 15.1</span></div>
+<main><header><div><p class="micro">FIELD NOTES / 动效参考</p><h1>视觉参考图鉴</h1><p>按用途找动效。先看代表帧，点播理解原理，再复制模板换成自己的场景。</p></div><div class="counter" aria-label="共十五条参考"><b>15</b> 动效参考</div></header>
+<div class="shelves" aria-label="切换图鉴分区"><button data-shelf="studies">动作实验 · 6</button><button data-shelf="featured">进阶精选 · 3</button><button data-shelf="base">基础白模 · 6</button><button data-shelf="all">全部 · 15</button></div><div class="controls"><label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" aria-label="搜动效" placeholder="试试：把注意力从前面移到后面" autocomplete="off"></label><div class="filters" aria-label="按用途筛选"></div><div class="actions"><button id="favorites" aria-pressed="false">☆ 只看收藏</button></div></div>
+<div class="rail"><span class="status" id="count" aria-live="polite"></span><span id="rail-note"></span></div><div class="grid"></div><div class="empty" hidden>没有匹配的样卡。可以清空搜索或换一个分类。 <button id="reset">清除筛选</button></div>
+</main><footer>进阶手法参考：<a href="https://atlas.letz.ai/" target="_blank" rel="noopener noreferrer">VFX Atlas</a>（原创动态示意）　／　基础原版动效：<a href="https://github.com/showheyohtaki/motion-prompt" target="_blank" rel="noopener noreferrer">Motion Prompt</a> · © 2026 Shohei Ohtaki · MIT　／　编排参考：枝鸥视觉参考图鉴　／　中文卡片与用途索引：本图鉴整理　／　<a href="THIRD-PARTY-NOTICES.md">第三方许可</a></footer><div id="toast" role="status" hidden></div>
+<script type="application/json" id="cards">[{"id": "s03", "name": "希区柯克变焦", "en": "Dolly Zoom", "study": true, "group": "带人看空间", "seconds": 4.6, "dims": [720, 400], "desc": "镜头往前走，同时拉广焦距，正中的旅人保持一样大，走廊却像往深处退开。", "prompt": "对准[主体]沿镜头轴[推进或后拉]，同时反向调整焦距，始终保持主体在画面中的尺寸和位置几乎不变。让[背景中的纵深参照]明显拉伸或压缩。把[情绪转折]放在透视最强的一拍，不要直接缩放整帧。", "tags": ["镜头推近背景拉远", "走廊变长", "希区柯克", "眩晕", "主体大小不变", "透视变化"], "category": "空间 · 镜头 / 透视", "note": "周期与循环一致；接触影始终锚在地面脚点，不再自行旋转。", "beats": [["原始透视", 0.08], ["空间拉开", 0.54], ["回到原位", 0.991]], "rate": 1, "poster": 0.54}, {"id": "s04", "name": "形状变形", "en": "Shape Morph", "study": true, "group": "形状与材质", "seconds": 2.9, "dims": [720, 400], "desc": "直线弯成正圆，停一拍再收成定位针，最后回到直线。", "prompt": "让[起始轮廓]连续变形成[目标轮廓]。控制同一条轮廓的锚点和切线，不淡入替换、不凭空长出无关联细节。在[中间轮廓]停一拍，落定前给一次短促回弹。", "tags": ["轮廓变形", "线条变成图标", "圆变成定位针", "形状变来变去", "一条连续的线"], "category": "图形 · 弯曲 / 变形", "note": "先停在正圆；收尖后约 6.5% 回弹，再复原。", "beats": [["直线", 0.02], ["闭合成环", 0.33], ["定位图标", 0.65]], "rate": 1, "poster": 0.65}, {"id": "s08", "name": "前景遮挡转场", "en": "Occlusion Wipe", "study": true, "group": "切换画面", "seconds": 4.3, "dims": [720, 400], "desc": "近处的墙柱掠过视野，完全遮住时切场，移开后从站台来到海岸。", "prompt": "让镜头从[场景 A]横移经过贴近镜头的[前景遮挡物]，遮挡物比远处背景移动快；在画面被完全覆盖时切换到[场景 B]，遮挡物离开后再露出新场景。保留前后移动方向，边缘只加轻微运动模糊。", "tags": ["柱子遮挡换场", "从墙后穿过去", "镜头经过前景", "空间切换", "无感换场"], "category": "转场 · 遮挡 / 硬切", "note": "掠过约 0.52 秒；挡满时切场，边缘轻微羽化。", "beats": [["站台", 0.08], ["完全遮挡", 0.315], ["海岸", 0.55]], "rate": 1, "poster": 0.292}, {"id": "s01", "name": "爆炸分解", "en": "Exploded View", "study": true, "group": "讲清结构", "seconds": 5.6, "dims": [720, 400], "desc": "一台便携播放器沿同一根轴拆成面板、内部部件和后壳，停一拍看清对应关系，再依次装回。", "prompt": "把[设备或物件]从完整状态沿[拆解轴]依次移开[部件列表]。保持各部件的形状、装配顺序和尺度不变；完全展开时留出阅读[标注]的时间。回装时让真实接触先发生，再给轻微机械顿挫。", "tags": ["分层", "机械", "零件拆开再装回", "展示内部结构", "拆解", "组装"], "category": "结构 · 分离 / 回装", "note": "固定厚度四壁；面板贴合后机身短震。", "beats": [["整机", 0.07], ["刚拆开", 0.3], ["完全拆开", 0.55], ["装回", 0.994]], "rate": 1, "poster": 0.55}, {"id": "s06", "name": "纸张撕开", "en": "Paper Tear Reveal", "study": true, "group": "切换画面", "seconds": 4.5, "dims": [720, 400], "desc": "沿裂尖将同一张海报分成两片。两片离场后停在完整底图，可手动重播。", "prompt": "让[上层画面]像一张纸，从[裂口起点]撕向[裂口终点]，露出[下层画面]。裂尖前的纸面保持连贯，裂口两侧随裂尖推进后翻、离场；只在边缘加入纤维、卷边高光和落在底层的投影。结束停在完整底图，不倒放。", "tags": ["撕裂", "揭开", "扒掉表层", "材质转场", "纸张卷边", "把纸撕开看看下面"], "category": "材质 · 裂开 / 卷边", "note": "整片纸向外移，只在裂尖附近弯折；放开后按一次性转场停止。", "beats": [["完整海报", 0.038], ["裂缝形成", 0.31], ["露出底层", 0.94]], "rate": 1, "once": true, "poster": 0.47}, {"id": "s09", "name": "定格拼贴", "en": "Freeze-frame Collage", "study": true, "group": "突出重点", "seconds": 5.4, "dims": [720, 400], "desc": "滑手跃到半空突然定格，人物脱离原背景。网点、报纸条、手绘箭头分三拍变成一张海报。", "prompt": "在[主体动作]达到[动作峰值]的一帧停格，把[主体]从[原场景]抠出。让[拼贴底图]扫过主体时才出现轮廓；随后按节拍加入[纸片或纹理]和[手绘标记]。让停格、底图、点缀是三个可读的节奏。", "tags": ["停格", "人物抠出", "滑板腾空", "漫画感", "报纸拼贴", "在最有张力的一帧停住"], "category": "节拍 · 定格 / 叠层", "note": "奶油白边只在拼贴扫过的位置出现。", "beats": [["踩板尾", 0.197], ["腾空定住", 0.42], ["拼贴完成", 0.77]], "rate": 1, "poster": 0.65}, {"id": "a107", "name": "多层景深运镜", "en": "Multiplane Camera", "group": "带人看空间", "seconds": 6.8, "dims": [720, 400], "desc": "从松枝间推向湖心亭：湖面水纹与倒影也依深度前移，远山变化最小。", "prompt": "沿同一消失点穿过[前景遮挡物]，推向[中景主体]，以[远景参照物]保持空间方向。按深度分配缩放和位移，近处出画快，远处变化小；[地面或水面纹理]跟随其所在平面，不要钉在屏幕上。", "tags": ["层次", "插画", "视差", "远近", "推入世界", "把平面做出纵深", "镜头穿过前景看到里面"], "slug": "multiplane-camera", "category": "动态示意", "note": "原创插画演示 · 依据 VFX Atlas 手法", "beats": [["层次建立", 0], ["水面推进", 0.29], ["推近湖心", 0.53], ["缓退归位", 0.8]], "poster": 0.4, "playUntil": 0.56}, {"id": "a159", "name": "狭缝扫描", "en": "Slit-Scan Photography", "group": "切换画面", "seconds": 5.8, "dims": [720, 400], "desc": "持续采样一条虚拟窄缝，把不同时刻的颜色沿深度展开。看亮斑如何顺着光轨掠出画框。", "prompt": "固定[消失点位置]，持续采样一条虚拟狭缝里的[光源、纹理和配色]，把不同时刻的采样沿深度排开。近处的光轨变宽、亮部顺光轨掠过；光带保留暗隙，不用外扩圆环或静态扇形射线。在[目标色调或场景]收束。", "tags": ["穿梭", "隧道", "光轨", "光带", "科幻", "从一个空间进入另一个空间", "穿过一道光门"], "slug": "slit-scan-photography", "category": "动态示意", "note": "原创数字示意 · 虚拟窄缝采样，不是光学实拍", "beats": [["细光起势", 0.18], ["亮斑掠过", 0.44], ["暖色尾迹", 0.7]], "poster": 0.44}, {"id": "a133", "name": "动态排版", "en": "Kinetic Typography", "group": "突出重点", "seconds": 5.8, "dims": [720, 400], "desc": "同一字族的 LOUD 砸落，O 的字孔揭开 QUIET；收尾顺着 Q 的字孔翻回开场。", "prompt": "让[第一句标题]按[口播重音]逐字落拍；选[带内孔的字形]，放大字孔揭出[下一句标题]。字孔尚小时只露底色，等下一句能完整容纳再显字。若标题没有闭合字孔，就用与字形风格一致的独立遮罩。", "tags": ["文字", "节拍", "有重量的开场", "开场标题", "跟着口播重音动", "文字撞进来", "让大字跟着节奏进来"], "slug": "kinetic-typography", "category": "动态示意", "note": "原创标题演示 · 依据 VFX Atlas 手法", "beats": [["重音落下", 0.157], ["字孔揭幕", 0.49], ["留白一拍", 0.78], ["字孔回环", 0.897]], "poster": 0.49}, {"id": "033", "name": "焦点转移", "en": "Rack Focus", "group": "突出重点", "pack": "camera", "index": 8, "seconds": 9.4, "desc": "机位不动，前景和后景交换清晰度。适合把视线从一个对象交给另一个。", "prompt": "固定机位和构图，将焦点从[前景主体]连续移到[后景主体]。随焦点移动交换两者的清晰度；中途不要靠镜头平移、整体缩放或切镜替代。", "tags": ["焦点", "景深", "虚实", "前景", "后景", "注意力", "把注意力从前面移到后面", "镜头不动把视线移到另一个对象"], "poster": 0.272, "playUntil": 0.5}, {"id": "005", "name": "遮罩揭示", "en": "Mask Reveal", "group": "突出重点", "pack": "motion", "index": 4, "seconds": 4.7, "desc": "用移动的遮罩逐步露出内容。适合揭开标题、关键字或结论。", "prompt": "保持[内容主体]原位，用[遮罩轮廓]沿[运动方向]推进，让[需要依次出现的内容]逐步露出。不要把内容当一个整块跟着遮罩移走。", "tags": ["标题", "文字", "结论", "擦出", "渐显", "让标题一点一点出现", "让内容从遮挡里露出来"], "poster": 0.26, "playUntil": 0.5}, {"id": "030", "name": "环绕运镜", "en": "Orbit / Arc Shot", "group": "带人看空间", "pack": "camera", "index": 5, "seconds": 9.4, "desc": "镜头沿弧线侧移，持续对准主体。适合揭示立体物体的另一侧。", "prompt": "镜头沿[弧线方向及角度]围绕[固定主体]移动并持续对准它；让[近景参照]和[背景参照]按深度产生不同视差。不要只旋转主体或整幅画面。", "tags": ["绕一圈", "绕着拍", "转到侧面", "看到另一侧", "立体", "3D", "围着主体转"], "poster": 0.267, "playUntil": 0.5}, {"id": "031", "name": "升起运镜", "en": "Crane Up", "group": "带人看空间", "pack": "camera", "index": 6, "seconds": 9.4, "desc": "镜头升高，视角从近处逐渐打开。适合由局部交代所在的整体环境。", "prompt": "让镜头从[起始高度]垂直升到[结束高度]，保留[空间参照物]，逐渐揭开被挡住的[新信息]。不要用单纯向上摇摄替代机位升高。", "tags": ["镜头抬高", "从地面升到高空", "鸟瞰", "俯视", "看全貌", "从局部拉开看全局"], "poster": 0.283, "playUntil": 0.5}, {"id": "042", "name": "形状匹配剪辑", "en": "Match Cut", "group": "切换画面", "pack": "camera", "index": 17, "seconds": 9.4, "desc": "让两个画面里的相似轮廓对齐，再直接切换。适合把不同场景连成一个比喻。", "prompt": "将[画面 A 主体]和[画面 B 主体]的[共同形状或动作方向]对齐。前后镜头的关键轮廓尽量同位置、同尺度，在重合的一瞬硬切，不做淡化。", "tags": ["圆形", "相似物体", "轮廓对齐", "比喻", "无缝切换", "同样的形状换场景", "找两个相似轮廓做转场"], "poster": 0.243, "playUntil": 0.5}, {"id": "043", "name": "甩镜转场", "en": "Whip Pan", "group": "切换画面", "pack": "camera", "index": 18, "seconds": 9.4, "desc": "镜头快速横甩，在最模糊的一刻切到下一场。适合有速度感的切换。", "prompt": "先在[场景 A]定住，再朝[运动方向]快速甩镜；在运动模糊最大的一段切到同方向运动的[场景 B]，再减速停在[目标主体]。保持运动方向和速度衔接。", "tags": ["快速切场景", "横甩", "横向运动", "运动模糊", "速度感", "迅速切换画面"], "poster": 0.223, "playUntil": 0.5}]</script>
+<script>
+/* MIT License
+
+Copyright (c) 2026 Shohei Ohtaki
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ */
+const demos={};
+demos.camera = (()=>{
+// Motion Prompt #025-048 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#025
+//
+// Kit for pack "camera" (Camera moves & transitions / カメラワークと切り替え): the constants and helpers its elements share.
+// Elements #025-048 · 539x208 px · cycle 9.4 s. Element code: https://showheyohtaki.github.io/motion-prompt/api/v1/en/e/<id>.txt (or /ja/).
+//
+// Run one element standalone in a browser:
+//   1. paste this file into a <script>,
+//   2. paste the element code below it (it assigns CELLS[n - 1], n = the element number inside the pack),
+//   3. then add:
+//        const c = document.createElement('canvas'); c.width = 539; c.height = 208; document.body.append(c);
+//        const k = c.getContext('2d'), cell = CELLS.find(Boolean), t0 = performance.now();
+//        (function loop() {
+//          const u = ((performance.now() - t0) / 1000) % 9.4;   // seconds, 0 <= u < 9.4
+//          k.setTransform(1, 0, 0, 1, 0, 0); k.clearRect(0, 0, 539, 208);
+//          k.save(); cell(k, 539, 208, u); k.restore();
+//          requestAnimationFrame(loop);
+//        })();
+// Every cell is a pure function of u, so the same call renders video frames: u = frame / fps.
+
+// @kit
+// カメラワーク＆切り替え 24（カード 539x208）。各コマは時間 u の純関数。
+// 1つの動きは CYC=4.7秒。切り替え（19〜21）は A→B の次に B→A と戻るので、パックの周期は CYC×2=9.4秒。
+const CW = 539, CH = 208, FPS = 30;
+const HOLD = 9.4, CYC = HOLD / 2;
+const C = {
+  bg: '#F4F3F0', card: '#FFFFFF', border: '#E3E1DC', ink: '#1E1E21', sub: '#8E8E93', faint: '#C9C9CC',
+  blue: '#2F6BEB', blueM: '#9DB8F6', blueL: '#C9D8FB', blueXL: '#E4ECFE', blueBg: '#F1F5FF',
+  grid: '#ECECEC', g1: '#F1F0EE', g2: '#E2E1DE', g3: '#CFCECB', g4: '#A9A8A5'
+};
+const JP = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif';
+const EN = '"Helvetica Neue", "SF Pro Display", system-ui, sans-serif';
+const MONO = '"SF Mono", ui-monospace, Menlo, monospace';
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, x) => a + (b - a) * x;
+const P = (t, a, b) => clamp((t - a) / (b - a));
+const eIO = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const eIOs = x => x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+const eOut = x => 1 - Math.pow(1 - x, 3);
+const mod = (a, n) => ((a % n) + n) % n;
+function mkCanvas(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+function rr(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); }
+function txt(ctx, s, x, y, font, col, align = 'left', base = 'alphabetic', ls = '0px') {
+  ctx.font = font; ctx.fillStyle = col; ctx.textAlign = align; ctx.textBaseline = base; ctx.letterSpacing = ls; ctx.fillText(s, x, y); ctx.letterSpacing = '0px';
+}
+function tw(ctx, s, font, ls = '0px') { ctx.font = font; ctx.letterSpacing = ls; const w = ctx.measureText(s).width; ctx.letterSpacing = '0px'; return w; }
+
+// ============================== 3D SCENE ==============================
+// 世界座標: Y上・カメラは +Z を向く（yaw=0）。単位はメートル。焦点距離 f はピクセル。
+const F0 = 330;  // = 24mm 表示
+const mm = f => Math.round(f / F0 * 24) + 'mm';
+function cam(o) { return Object.assign({ x: 0, y: 1.5, z: 0, yaw: 0, pitch: 0, roll: 0, f: F0 }, o); }
+function proj(c, X, Y, Z) {
+  const dx = X - c.x, dy = Y - c.y, dz = Z - c.z;
+  const cy = Math.cos(c.yaw), sy = Math.sin(c.yaw);
+  const x1 = dx * cy - dz * sy, z1 = dx * sy + dz * cy;
+  const cp = Math.cos(c.pitch), sp = Math.sin(c.pitch);
+  const y2 = dy * cp - z1 * sp, z2 = dy * sp + z1 * cp;
+  return { x: c.f * x1 / z2, y: -c.f * y2 / z2, z: z2, s: c.f / z2, cx: x1, cy: y2 };
+}
+function camZ(c, X, Y, Z) { return proj(c, X, Y, Z).z; }
+const NEAR = 0.25;
+function seg(ctx, c, a, b) {   // 3D line with near clipping
+  let za = camZ(c, ...a), zb = camZ(c, ...b);
+  if (za < NEAR && zb < NEAR) return;
+  if (za < NEAR) { const t = (NEAR - za) / (zb - za); a = a.map((v, i) => lerp(v, b[i], t)); }
+  else if (zb < NEAR) { const t = (NEAR - zb) / (za - zb); b = b.map((v, i) => lerp(v, a[i], t)); }
+  const p = proj(c, ...a), q = proj(c, ...b);
+  ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
+}
+function poly(ctx, c, pts) { ctx.beginPath(); pts.forEach((p, i) => { const q = proj(c, ...p); i ? ctx.lineTo(q.x, q.y) : ctx.moveTo(q.x, q.y); }); ctx.closePath(); }
+
+// sprite = local drawing (meters, y up) anchored at a world point, always facing camera (billboard)
+function sprite(ctx, c, X, Y, Z, fn) {
+  const p = proj(c, X, Y, Z); if (p.z < NEAR) return;
+  ctx.save(); ctx.translate(p.x, p.y); ctx.scale(p.s, -p.s); fn(ctx, p.s); ctx.restore();
+}
+function person(ctx, s, o = {}) {
+  const col = o.col || C.blue, walk = o.walk || 0, face = o.face;
+  ctx.fillStyle = col;
+  const sw = Math.sin(walk) * 0.42;
+  // legs
+  [[-0.08, sw], [0.08, -sw]].forEach(([x, a]) => { ctx.save(); ctx.translate(x, 0.86); ctx.rotate(a); rr(ctx, -0.075, -0.86, 0.15, 0.88, 0.07); ctx.fill(); ctx.restore(); });
+  // arms
+  [[-0.25, -sw], [0.25, sw]].forEach(([x, a]) => { ctx.save(); ctx.translate(x, 1.38); ctx.rotate(a * (o.armUp ? 0 : 1) + (o.armUp ? (x < 0 ? -2.6 : 2.6) : 0)); rr(ctx, -0.06, -0.58, 0.12, 0.6, 0.06); ctx.fill(); ctx.restore(); });
+  rr(ctx, -0.23, 0.82, 0.46, 0.64, 0.12); ctx.fill();
+  ctx.beginPath(); ctx.arc(0, 1.63, 0.16, 0, 7); ctx.fill();
+  if (face !== undefined && Math.cos(face) > 0) {   // 顔の向き（オービット用）
+    ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(Math.sin(face) * -0.09, 1.65, 0.035, 0, 7); ctx.fill();
+  }
+}
+function tree(ctx, s, h = 4, col = C.g2) {
+  ctx.fillStyle = C.g3; ctx.fillRect(-0.09 * h / 4, 0, 0.18 * h / 4, h * 0.55);
+  ctx.fillStyle = col; ctx.beginPath(); ctx.arc(0, h * 0.68, h * 0.3, 0, 7); ctx.fill();
+}
+function building(ctx, s, w, h, col = C.g1) {
+  ctx.fillStyle = col; ctx.fillRect(-w / 2, 0, w, h);
+  ctx.strokeStyle = C.g3; ctx.lineWidth = 1.4 / s; ctx.strokeRect(-w / 2, 0, w, h);
+  ctx.fillStyle = C.g2;
+  for (let y = h - 1.6; y > 1; y -= 1.8) for (let x = -w / 2 + 0.6; x < w / 2 - 0.7; x += 1.3) ctx.fillRect(x, y, 0.6, 0.8);
+}
+function post(ctx, s, h = 1.2) { ctx.fillStyle = C.g4; ctx.fillRect(-0.07, 0, 0.14, h); ctx.fillRect(-0.12, h - 0.06, 0.24, 0.1); }
+
+// scene presets
+const MTN_FAR = [[-420, 0], [-300, 22], [-230, 8], [-150, 30], [-80, 12], [-20, 34], [50, 14], [120, 28], [190, 6], [260, 26], [340, 10], [420, 0]];
+const MTN_NEAR = [[-260, 0], [-190, 12], [-140, 4], [-70, 18], [-20, 6], [30, 15], [95, 3], [160, 16], [230, 5], [300, 0]];
+const BLD = [[-17, 4, 9], [-12, 3.2, 13], [-8, 2.6, 7], [11, 3.4, 11], [15.5, 4, 8], [20, 3, 15], [-24, 3.5, 10], [26, 4, 7]];
+const CITY = [[-9, 3.4, 12], [-5.5, 3, 18], [-2, 3.6, 9], [1.8, 3, 22], [5.4, 3.6, 14], [9, 3, 10], [-13, 3.4, 15], [12.8, 3.6, 19]];
+
+function world(ctx, w, h, c, o = {}) {
+  ctx.save();
+  ctx.translate(w / 2, h / 2); ctx.rotate(c.roll || 0);
+  const blurBg = o.blurBg || 0, blurFg = o.blurFg || 0;
+  const setBlur = b => { ctx.filter = b > 0.05 ? `blur(${b.toFixed(2)}px)` : 'none'; };
+  // sky tint
+  if (o.sky) { ctx.fillStyle = o.sky; ctx.fillRect(-w * 2, -h * 3, w * 4, h * 6); }
+  setBlur(blurBg);
+  // sun / moon
+  const sun = o.sun === undefined ? [30, 30, 170] : o.sun;
+  if (sun) { const p = proj(c, ...sun); if (p.z > NEAR) { ctx.fillStyle = o.sunCol || C.blueL; ctx.beginPath(); ctx.arc(p.x, p.y, Math.max(0, 5.5 * p.s * (o.sunScale || 1)), 0, 7); ctx.fill(); } }
+  if (o.clouds) o.clouds.forEach(([X, Y, Z, r]) => { const p = proj(c, X, Y, Z); if (p.z < NEAR) return; ctx.fillStyle = C.g1; ctx.beginPath(); ctx.ellipse(p.x, p.y, r * 2.2 * p.s, r * p.s, 0, 0, 7); ctx.ellipse(p.x + r * 1.2 * p.s, p.y + r * .2 * p.s, r * 1.4 * p.s, r * .8 * p.s, 0, 0, 7); ctx.fill(); });
+  // mountains (far planes)
+  if (o.mountains !== false) {
+    const off = o.mtnZ || 0;
+    ctx.fillStyle = C.blueXL; poly(ctx, c, [...MTN_FAR.map(([x, y]) => [x, y, 175 + off])]); ctx.fill();
+    ctx.fillStyle = C.blueL; poly(ctx, c, [...MTN_NEAR.map(([x, y]) => [x, y, 120 + off])]); ctx.fill();
+  }
+  // ground + grid
+  if (o.grid !== false) {
+    ctx.save(); setBlur(blurBg * 0.6);
+    ctx.strokeStyle = C.grid; ctx.lineWidth = 1.3; ctx.beginPath();
+    const z0 = Math.floor(c.z / 2) * 2, xs = o.gridX || 40;
+    for (let z = z0 + 2; z <= z0 + 90; z += (z - z0 < 30 ? 2 : 6)) seg(ctx, c, [-xs + c.x, 0, z], [xs + c.x, 0, z]);
+    for (let x = Math.floor(c.x / 2) * 2 - xs; x <= c.x + xs; x += 2) seg(ctx, c, [x, 0, z0 + 0.5], [x, 0, z0 + 90]);
+    ctx.stroke();
+    // horizon
+    ctx.strokeStyle = C.g2; ctx.lineWidth = 1.5; ctx.beginPath(); seg(ctx, c, [c.x - 400, 0, c.z + 300], [c.x + 400, 0, c.z + 300]); ctx.stroke();
+    ctx.restore();
+  }
+  // sprites sorted by depth
+  const list = [];
+  const add = (X, Y, Z, fn, fg) => list.push({ z: camZ(c, X, Y, Z), X, Y, Z, fn, fg });
+  if (o.buildings !== false) (o.city ? CITY.map(([x, bw, bh]) => [x, bw, bh, 30]) : BLD.map(([x, bw, bh]) => [x, bw, bh, 48])).forEach(([x, bw, bh, z]) => add(x, 0, z, (k, s) => building(k, s, bw, bh)));
+  if (o.trees !== false) [[-7, 22], [6.5, 19], [9.5, 24], [-11, 26], [3, 30]].forEach(([x, z]) => add(x, 0, z, (k, s) => tree(k, s, 4)));
+  if (o.tower) add(o.tower[0], 0, o.tower[1], (k, s) => { building(k, s, 6, 9.5, C.g1); k.fillStyle = C.g4; k.fillRect(-0.08, 9.5, 0.16, 2.2); k.fillStyle = C.blue; k.beginPath(); k.arc(0, 11.8, 0.3, 0, 7); k.fill(); });
+  if (o.ring) for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2; add(o.ring[0] + Math.sin(a) * o.ring[2], 0, o.ring[1] + Math.cos(a) * o.ring[2], (k, s) => tree(k, s, 3.2, i % 3 ? C.g2 : C.blueXL)); }
+  if (o.extra) o.extra.forEach(e => add(e[0], e[1], e[2], e[3], e[4]));
+  if (o.person) { const pp = o.person; add(pp.x || 0, pp.y || 0, pp.z === undefined ? 8 : pp.z, (k, s) => person(k, s, pp), pp.fg); }
+  if (o.fg) o.fg.forEach(([X, Z, kind]) => add(X, 0, Z, (k, s) => kind === 'rock' ? (k.fillStyle = C.g3, k.beginPath(), k.ellipse(0, 0.1, 0.55, 0.38, 0, 0, 7), k.fill()) : post(k, s), true));
+  list.sort((a, b) => b.z - a.z);
+  for (const it of list) { setBlur(it.fg ? blurFg : blurBg); sprite(ctx, c, it.X, it.Y, it.Z, it.fn); }
+  ctx.filter = 'none';
+  if (o.after) o.after(ctx, c);
+  ctx.restore();
+}
+
+// ============================== VIEWFINDER CARD ==============================
+const CARD = mkCanvas(CW, CH), CK = CARD.getContext('2d');
+const TMP = mkCanvas(CW, CH), TK = TMP.getContext('2d');
+const TMP2 = mkCanvas(CW, CH), TK2 = TMP2.getContext('2d');
+function clear(k, w = CW, h = CH) { k.setTransform(1, 0, 0, 1, 0, 0); k.globalAlpha = 1; k.filter = 'none'; k.fillStyle = '#FFFFFF'; k.fillRect(0, 0, w, h); }
+// draw fnA then blend fnB on top with alpha a (into k)
+function blend(k, fnA, fnB, a) {
+  if (a <= 0.001) return fnA(k);
+  if (a >= 0.999) return fnB(k);
+  fnA(k);
+  clear(TK2); fnB(TK2); k.save(); k.globalAlpha = a; k.drawImage(TMP2, 0, 0); k.restore();
+}
+// motion blur: average n renders of fn(k, s) with s spread over [s0, s1]
+function mblur(k, fn, s0, s1, n) {
+  if (Math.abs(s1 - s0) < 1e-4 || n < 2) return fn(k, s0);
+  const acc = mkCanvasCached(), ak = acc.getContext('2d');
+  for (let i = 0; i < n; i++) {
+    clear(TK); fn(TK, lerp(s0, s1, (i + .5) / n));
+    ak.globalAlpha = 1 / (i + 1); ak.drawImage(TMP, 0, 0);
+  }
+  ak.globalAlpha = 1; k.save(); k.drawImage(acc, 0, 0); k.restore();
+}
+let _acc; function mkCanvasCached() { if (!_acc) _acc = mkCanvas(CW, CH); const k = _acc.getContext('2d'); k.globalAlpha = 1; k.fillStyle = '#fff'; k.fillRect(0, 0, CW, CH); return _acc; }
+
+function viewfinder(k, w, h, t, hud, hudCol) {
+  k.save();
+  const m = 13, L = 20;
+  k.strokeStyle = '#8F8F94'; k.lineWidth = 2.6; k.lineCap = 'round';
+  k.beginPath();
+  [[m, m, 1, 1], [w - m, m, -1, 1], [m, h - m, 1, -1], [w - m, h - m, -1, -1]].forEach(([x, y, sx, sy]) => { k.moveTo(x, y + sy * L); k.lineTo(x, y); k.lineTo(x + sx * L, y); });
+  k.stroke();
+  // center mark
+  k.strokeStyle = 'rgba(143,143,148,.55)'; k.lineWidth = 1.6; k.beginPath(); k.moveTo(w / 2 - 7, h / 2); k.lineTo(w / 2 + 7, h / 2); k.moveTo(w / 2, h / 2 - 7); k.lineTo(w / 2, h / 2 + 7); k.stroke();
+  // REC (なめらかな明滅・9.4秒で9回＝ループの継ぎ目なし)
+  const a = 0.55 + 0.45 * Math.cos(t * Math.PI * 2 * 9 / HOLD);
+  k.fillStyle = C.blue; k.globalAlpha = a; k.beginPath(); k.arc(m + 16, m + 17, 5, 0, 7); k.fill(); k.globalAlpha = 1;
+  txt(k, 'REC', m + 27, m + 17, `600 14px ${MONO}`, '#7D7D82', 'left', 'middle');
+  if (hud) {
+    const f = `600 15px ${MONO}`, ww = tw(k, hud, f);
+    k.fillStyle = 'rgba(255,255,255,.82)'; rr(k, w - m - 14 - ww - 10, m + 6, ww + 20, 23, 6); k.fill();
+    txt(k, hud, w - m - 14, m + 18, f, hudCol || '#6E6E73', 'right', 'middle');
+  }
+  k.restore();
+}
+
+// ============================== CELLS ==============================
+// each: (k, w, h, u) where u = time within the cycle (0..CYC), cyc = cycle index; returns HUD string
+const RESET = 0.5;  // 末尾のクロスフェードで開始状態へ戻す
+function camCell(stateAt, hudAt, t0 = 0.5, t1 = 3.4) {
+  return (k, w, h, u) => {
+    const p = eIO(P(u, t0, t1));
+    const r = P(u, CYC - RESET, CYC);
+    blend(k, kk => stateAt(kk, w, h, p, u), kk => stateAt(kk, w, h, 0, u - CYC), eIOs(r));
+    return hudAt(r > 0.5 ? 0 : p, u);
+  };
+}
+// 1コマぶんの枠: 白地 → 中身 → ファインダー（四隅・REC・右上の数値）。u はパック周期 0..CYC×2
+function shot(fn, vh) {
+  return (k, w, h, u) => {
+    const uu = mod(u, CYC), cyc = Math.floor(u / CYC);
+    k.fillStyle = '#FFFFFF'; k.fillRect(0, 0, w, h);
+    k.save(); const hud = fn(k, w, h, uu, cyc); k.restore();
+    k.globalAlpha = 1; k.filter = 'none';
+    viewfinder(k, w, vh || h, u, hud);
+  };
+}
+const CELLS = [];
+
+// @shared
+// 跳躍の高さと、舞い落ちる葉（13・14・16 で使う）
+function jumpY(q) { return q <= 0 || q >= 1 ? 0 : 4 * q * (1 - q) * 1.1; }
+function leaves(u, speed) { const ex = []; for (let i = 0; i < 9; i++) { const ph = mod(u * speed / 4.7 + i / 9, 1); ex.push([-3 + i * 0.75 + Math.sin(i * 3) * 0.3, 3.4 - ph * 3.4, 6 + (i % 3), (kk) => { kk.fillStyle = i % 2 ? C.blueM : C.g3; kk.save(); kk.rotate(ph * 6 + i); kk.beginPath(); kk.ellipse(0, 0, 0.09, 0.045, 0, 0, 7); kk.fill(); kk.restore(); }]); } return ex; }
+
+// @shared
+// ---- 切り替え: 奇数サイクルは B→A に戻る（リセット不要）
+const sceneA = (k, w, h, extra = {}) => world(k, w, h, cam(Object.assign({ y: 1.4 }, extra.cam)), Object.assign({ person: { x: -0.6, z: 7 } }, extra));
+const CAR = [1.2, 0, 9, (kk) => { kk.fillStyle = C.blue; rr(kk, -1.9, 0.35, 3.8, 0.75, 0.25); kk.fill(); rr(kk, -1.1, 0.95, 2.1, 0.62, 0.28); kk.fill(); kk.fillStyle = '#fff'; kk.fillRect(-0.85, 1.08, 0.8, 0.36); kk.fillRect(0.12, 1.08, 0.7, 0.36); kk.fillStyle = C.ink; [-1.15, 1.15].forEach(x => { kk.beginPath(); kk.arc(x, 0.34, 0.34, 0, 7); kk.fill(); }); }];
+const SB = { city: true, mountains: false, trees: false, sun: [-26, 40, 150], extra: [CAR] };
+const sceneB = (k, w, h, extra = {}) => world(k, w, h, cam(Object.assign({ y: 1.6, pitch: 0.1 }, extra.cam)), Object.assign({}, SB, extra));
+function abCell(trans, hudFn) {
+  return (k, w, h, u, cyc) => {
+    const S = cyc % 2 === 0 ? [sceneA, sceneB] : [sceneB, sceneA];
+    trans(k, w, h, u, S[0], S[1], cyc);
+    return hudFn ? hudFn(u, cyc) : (cyc % 2 === 0 ? 'A → B' : 'B → A');
+  };
+}
+
+// @shared
+// 23/24 J・L カット: 上が映像、下に映像と音のタイムライン
+function splitCell(lead) {   // lead>0: 音が先（J） / lead<0: 音が後（L）
+  return (k, w, h, u, cyc) => {
+    const vh = 134;
+    const p = clamp((u - 0.4) / 3.6);       // 再生ヘッド
+    const r = P(u, CYC - RESET, CYC);
+    const X0 = 70, X1 = w - 22, cutV = 0.55, cutA = cutV - lead;
+    const draw = (kk, p) => {
+      // 映像
+      kk.save(); kk.beginPath(); kk.rect(0, 0, w, vh); kk.clip();
+      (p < cutV ? sceneA : sceneB)(kk, w, vh, { cam: { pitch: p < cutV ? -0.13 : -0.06 } });
+      // 今流れている音
+      const aB = p >= cutA, lab = aB ? '♪ Bの音' : '♪ Aの音', f = `700 15px ${JP}`;
+      const bw = tw(kk, lab, f) + 22;
+      kk.fillStyle = aB ? C.blue : '#8E8E93'; rr(kk, w - 42 - bw, vh - 40, bw, 26, 13); kk.fill();
+      txt(kk, lab, w - 42 - bw / 2, vh - 26.5, f, '#fff', 'center', 'middle');
+      const sl = p < cutV ? 'A' : 'B';
+      kk.fillStyle = 'rgba(255,255,255,.9)'; rr(kk, 42, vh - 40, 70, 26, 13); kk.fill();
+      txt(kk, '映像' + sl, 77, vh - 26.5, `700 15px ${JP}`, C.ink, 'center', 'middle');
+      kk.restore();
+      kk.strokeStyle = C.border; kk.lineWidth = 1.5; kk.beginPath(); kk.moveTo(0, vh + .5); kk.lineTo(w, vh + .5); kk.stroke();
+      // タイムライン
+      const tracks = [['映像', vh + 14, cutV], ['音', vh + 44, cutA]];
+      const xAt = q => lerp(X0, X1, q);
+      tracks.forEach(([name, y, cut]) => {
+        txt(kk, name, 18, y + 11, `600 15px ${JP}`, C.sub, 'left', 'middle');
+        kk.fillStyle = C.g2; rr(kk, X0, y, xAt(cut) - X0 - 2, 22, 5); kk.fill();
+        kk.fillStyle = C.blueL; rr(kk, xAt(cut) + 2, y, X1 - xAt(cut) - 2, 22, 5); kk.fill();
+        txt(kk, 'A', X0 + 10, y + 11.5, `700 14px ${EN}`, C.g4, 'left', 'middle');
+        txt(kk, 'B', xAt(cut) + 12, y + 11.5, `700 14px ${EN}`, C.blue, 'left', 'middle');
+        if (name === '音') {   // 波形
+          kk.strokeStyle = 'rgba(255,255,255,.95)'; kk.lineWidth = 1.6; kk.beginPath();
+          for (let x = X0 + 26; x < X1 - 6; x += 5) { if (x < X0 + 24 || (x > xAt(cut) - 4 && x < xAt(cut) + 26)) continue; const a = 3 + 5 * Math.abs(Math.sin(x * 0.37) * Math.cos(x * 0.11)); kk.moveTo(x, y + 11 - a); kk.lineTo(x, y + 11 + a); }
+          kk.stroke();
+        }
+      });
+      // ずれている区間を強調
+      const a1 = xAt(Math.min(cutA, cutV)), a2 = xAt(Math.max(cutA, cutV));
+      kk.fillStyle = 'rgba(47,107,235,.12)'; kk.fillRect(a1, vh + 8, a2 - a1, 64);
+      kk.strokeStyle = C.blue; kk.lineWidth = 1.5; kk.setLineDash([4, 3]); kk.beginPath(); kk.moveTo(a1, vh + 8); kk.lineTo(a1, vh + 72); kk.moveTo(a2, vh + 8); kk.lineTo(a2, vh + 72); kk.stroke(); kk.setLineDash([]);
+      // 再生ヘッド
+      const hx = xAt(p); kk.fillStyle = C.ink; kk.fillRect(hx - 1.5, vh + 6, 3, 68); kk.beginPath(); kk.moveTo(hx - 6, vh + 4); kk.lineTo(hx + 6, vh + 4); kk.lineTo(hx, vh + 11); kk.fill();
+    };
+    blend(k, kk => draw(kk, p), kk => draw(kk, 0), eIOs(r));
+    return null;
+  };
+}
+
+// Motion Prompt #033 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#033
+//
+// Rack focus / ラックフォーカス
+// Pack: camera (Camera moves & transitions) · element 09 · Category: Shooting Style & Time
+// What happens: The camera does not move; focus shifts from a flower in the foreground to a person behind it, swapping which one is blurred.
+// Motion spec:
+//   - Camera: position, direction and focal length all fixed (height 1.1 m); only the blur amounts change
+//   - Blur: the foreground flower (0.75 m left, 2 m away) goes 0 px → 7 px; the person and background (person 0.9 m right, 9 m away) go 6 px → 0 px; the ground grid uses 0.6× the background blur
+//   - Timing: 1.0 s to 2.6 s (1.6 s), cubic ease-in-out (about cubic-bezier(0.65,0,0.35,1))
+//   - Focus marker: blue corner brackets travel in a straight line from the flower to the person, half-width shrinking 46 px → 30 px
+//   - Subject: neither the flower nor the person moves
+//   - Return: hold 2.6–4.2 s, then cross-fade back over the last 0.5 s; top-right readout shows focus distance (◎ 2m → ◎ 9m)
+// When to use it: To move attention from foreground to background (or back) without cutting.
+// Tags: rack focus, focus pull, pull focus, depth of field, blur, bokeh, foreground
+// Size: 539x208 px · Cycle: 9.4 s
+// Needs: kit camera -> https://showheyohtaki.github.io/motion-prompt/api/v1/kit/camera.js
+// Live demo: https://showheyohtaki.github.io/motion-prompt/#033
+//
+// cells[i](k, w, h, u): k = CanvasRenderingContext2D (already cleared and wrapped in save/restore by the caller), w,h = size, u = seconds in [0, cycle). The picture depends only on u.
+// Element code starts here. CELLS, constants and helpers live in the kit.
+
+// @element 09
+// 09 ラックフォーカス
+CELLS[8] = shot(camCell((k, w, h, p) => {
+  world(k, w, h, cam({ y: 1.1 }), {
+    person: { x: 0.9, z: 9 }, blurFg: 7 * p, blurBg: 6 * (1 - p),
+    extra: [[-0.75, 0, 2.0, (kk, s) => { kk.fillStyle = C.g3; kk.fillRect(-0.025, 0, 0.05, 0.75); kk.fillStyle = C.blueM; for (let i = 0; i < 6; i++) { kk.beginPath(); kk.ellipse(Math.cos(i) * 0.09, 0.8 + Math.sin(i) * 0.09, 0.08, 0.05, i, 0, 7); kk.fill(); } kk.fillStyle = C.blue; kk.beginPath(); kk.arc(0, 0.8, 0.05, 0, 7); kk.fill(); }, true]],
+    after: (kk, cc) => {   // ピント位置の枠
+      const a = proj(cc, -0.75, 0.8, 2.0), b = proj(cc, 0.9, 0.9, 9);
+      const x = lerp(a.x, b.x, p), y = lerp(a.y, b.y, p), r = lerp(46, 30, p);
+      kk.strokeStyle = C.blue; kk.lineWidth = 2; kk.beginPath();
+      [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([sx, sy]) => { kk.moveTo(x + sx * r, y + sy * r - sy * 9); kk.lineTo(x + sx * r, y + sy * r); kk.lineTo(x + sx * r - sx * 9, y + sy * r); });
+      kk.stroke();
+    }
+  });
+}, p => `◎ ${lerp(2, 9, p).toFixed(0)}m`, 1.0, 2.6));
+
+// Motion Prompt #030 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#030
+//
+// Orbit (Arc shot) / オービット
+// Pack: camera (Camera moves & transitions) · element 06 · Category: Camera Movement
+// What happens: The camera travels on a circle around the subject; the person stays centred while the trees and buildings behind sweep sideways.
+// Motion spec:
+//   - Camera: travels on a circle of radius 6 m centred on the person (9 m ahead), from -0.95 rad → +0.95 rad (-54° → +54°, about 109° in total)
+//   - Direction: always faces the centre (yaw = -angle); height 1.7 m, pitch fixed at -0.07 rad (about 4° down)
+//   - Timing: 0.5 s to 3.6 s (3.1 s), cubic ease-in-out (about cubic-bezier(0.65,0,0.35,1))
+//   - Subject: the person does not move; a white dot on the face shifts sideways with the angle; a dashed circle of radius 1.3 m marks the ground
+//   - Background: 12 trees evenly spaced on a 10 m radius cross behind the person as the camera moves round
+//   - Return: hold 3.6–4.2 s, then cross-fade back over the last 0.5 s; top-right readout shows the angle (-54° → +54°)
+// When to use it: To show a person or product in three dimensions, or to emphasise an entrance or a key moment.
+// Tags: orbit, arc shot, circle, 360, rotate around, revolve, camera move
+// Size: 539x208 px · Cycle: 9.4 s
+// Needs: kit camera -> https://showheyohtaki.github.io/motion-prompt/api/v1/kit/camera.js
+// Live demo: https://showheyohtaki.github.io/motion-prompt/#030
+//
+// cells[i](k, w, h, u): k = CanvasRenderingContext2D (already cleared and wrapped in save/restore by the caller), w,h = size, u = seconds in [0, cycle). The picture depends only on u.
+// Element code starts here. CELLS, constants and helpers live in the kit.
+
+// @element 06
+// 06 オービット: 被写体を中心に円を描いて回り込む
+CELLS[5] = shot(camCell((k, w, h, p) => {
+  const a = lerp(-0.95, 0.95, p), R = 6, P0 = [0, 0, 9];
+  const c = cam({ x: P0[0] + Math.sin(a) * R, z: P0[2] - Math.cos(a) * R, yaw: -a, y: 1.7, pitch: -0.07 });
+  world(k, w, h, c, {
+    person: { z: 9, face: a }, ring: [0, 9, 10], buildings: true, trees: false,
+    after: (kk, cc) => { kk.strokeStyle = C.blueM; kk.lineWidth = 2; kk.setLineDash([5, 5]); kk.beginPath(); for (let i = 0; i <= 48; i++) { const b = i / 48 * Math.PI * 2; const q = proj(cc, Math.sin(b) * 1.3, 0, 9 + Math.cos(b) * 1.3); i ? kk.lineTo(q.x, q.y) : kk.moveTo(q.x, q.y); } kk.stroke(); kk.setLineDash([]); }
+  });
+}, p => `${Math.round(lerp(-0.95, 0.95, p) * 57.3)}°`.replace(/^(\d)/, '+$1'), 0.5, 3.6));
+
+// Motion Prompt #031 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#031
+//
+// Crane up / クレーンアップ
+// Pack: camera (Camera moves & transitions) · element 07 · Category: Camera Movement
+// What happens: The camera rises while tilting down until it looks down on the person.
+// Motion spec:
+//   - Camera: rises from 1.4 m to 9 m while moving forward 0 m → 1.5 m
+//   - Direction: tilts down to keep the person (8 m ahead) in frame; pitch = -0.86 × atan2(height - 1.0, 8 - forward), about -2.5° → -44°
+//   - Timing: 0.5 s to 3.4 s (2.9 s), cubic ease-in-out (about cubic-bezier(0.65,0,0.35,1))
+//   - Subject: the person does not move; they get smaller as the camera rises, the ground grid fills the frame and the horizon leaves at the top
+//   - Return: hold 3.4–4.2 s, then cross-fade back to the start over the last 0.5 s (one pass = 4.7 s)
+//   - Top-right readout shows the height (↑ 1.4m → ↑ 9.0m)
+// When to use it: To pull away from a person at the end of a scene or to reveal how large the location is.
+// Tags: crane, crane up, jib, boom up, rise, high angle, camera move
+// Size: 539x208 px · Cycle: 9.4 s
+// Needs: kit camera -> https://showheyohtaki.github.io/motion-prompt/api/v1/kit/camera.js
+// Live demo: https://showheyohtaki.github.io/motion-prompt/#031
+//
+// cells[i](k, w, h, u): k = CanvasRenderingContext2D (already cleared and wrapped in save/restore by the caller), w,h = size, u = seconds in [0, cycle). The picture depends only on u.
+// Element code starts here. CELLS, constants and helpers live in the kit.
+
+// @element 07
+// 07 クレーンアップ: カメラが上昇し、見下ろしになる
+CELLS[6] = shot(camCell((k, w, h, p) => {
+  const y = lerp(1.4, 9, p), z = lerp(0, 1.5, p);
+  world(k, w, h, cam({ y, z, pitch: -0.86 * Math.atan2(y - 1.0, 8 - z) }), { person: { z: 8 } });
+}, p => `↑ ${lerp(1.4, 9, p).toFixed(1)}m`));
+
+// Motion Prompt #042 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#042
+//
+// Match cut / マッチカット
+// Pack: camera (Camera moves & transitions) · element 18 · Category: Transitions
+// What happens: A thrown ball becomes, in the next shot, a sun at the same position and size; two different scenes are joined on a matching shape.
+// Motion spec:
+//   - Join: a straight cut at 2.3 s (0 frames); the blue circle has the same position (120 px right, 46 px above centre) and radius 17 px on both sides
+//   - Outgoing shot (0–2.3 s): fixed camera (height 1.4 m); a person (1.2 m left, 7 m away) throws a ball from 0.5 s, cubic ease-out (about cubic-bezier(0.33,1,0.68,1))
+//   - Ball: travels from above the person's head (2.3 m high) to the match point; radius 5 px → 17 px, on an arc bulging up to 30 px
+//   - Incoming shot (2.3–4.7 s): a different place (no buildings, height 1.2 m); the blue circle in the same spot is now the sun and sinks 14 px over 2.4 s
+//   - Marker: a blue dashed circle of radius 26 px fades in and out within 0.7 s either side of the cut
+//   - Top-right readout shows "SHOT 1" → "SHOT 2"; at 4.7 s it cuts straight back to SHOT 1
+// When to use it: To link two scenes far apart in time or place through a shared shape or motion.
+// Tags: match cut, graphic match, shape match, cut, transition, edit
+// Size: 539x208 px · Cycle: 9.4 s
+// Needs: kit camera -> https://showheyohtaki.github.io/motion-prompt/api/v1/kit/camera.js
+// Live demo: https://showheyohtaki.github.io/motion-prompt/#042
+//
+// cells[i](k, w, h, u): k = CanvasRenderingContext2D (already cleared and wrapped in save/restore by the caller), w,h = size, u = seconds in [0, cycle). The picture depends only on u.
+// Element code starts here. CELLS, constants and helpers live in the kit.
+
+// @element 18
+// 18 マッチカット（投げたボール → 同じ位置・大きさの太陽）
+CELLS[17] = shot((k, w, h, u) => {
+  const cut = 2.3;
+  const BX = 120, BY = -46, BR = 17;
+  if (u < cut) {
+    const q = eOut(P(u, 0.5, cut));
+    world(k, w, h, cam({ y: 1.4 }), {
+      person: { x: -1.2, z: 7, armUp: q > 0.05 }, sun: null,
+      after: (kk, cc) => { const s = proj(cc, -1.2, 2.3, 7); const x = lerp(s.x, BX, q), y = lerp(s.y, BY, q) - Math.sin(q * Math.PI) * 30, r = lerp(5, BR, q); kk.fillStyle = C.blue; kk.beginPath(); kk.arc(x, y, r, 0, 7); kk.fill(); }
+    });
+  } else {
+    const q = P(u, cut, CYC);
+    world(k, w, h, cam({ y: 1.2 }), {
+      buildings: false, sun: null, trees: true,
+      after: (kk) => { kk.fillStyle = C.blue; kk.beginPath(); kk.arc(BX, BY + q * 14, BR, 0, 7); kk.fill(); }
+    });
+  }
+  // 形がそろっていることを示す点線の円
+  const g = Math.max(0, 1 - Math.abs(u - cut) / 0.7);
+  if (g > 0) { k.save(); k.translate(w / 2, h / 2); k.globalAlpha = g; k.strokeStyle = C.blue; k.lineWidth = 2; k.setLineDash([5, 4]); k.beginPath(); k.arc(BX, BY + (u > cut ? P(u, cut, CYC) * 14 : 0), BR + 9, 0, 7); k.stroke(); k.restore(); }
+  return u < cut ? 'SHOT 1' : 'SHOT 2';
+});
+
+// Motion Prompt #043 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#043
+//
+// Whip pan / ホイップパン
+// Pack: camera (Camera moves & transitions) · element 19 · Category: Transitions
+// What happens: The camera swings sideways very fast and the next scene is swapped in during the streaked blur.
+// Motion spec:
+//   - Join: 0.8 s, from 1.7 s to 2.5 s; in the first 0.4 s the outgoing shot swings away, in the last 0.4 s the incoming shot swings in and settles
+//   - First half: outgoing yaw 0 → +0.45 rad (about 26°), quadratic ease-in-out; second half: incoming yaw -0.45 rad → 0, same easing
+//   - Swap: a straight replacement at the 50% point, hidden because the blur is at its strongest
+//   - Blur: 9 renders spread over ±1.6 frames (at 30 fps) are averaged
+//   - Camera: height 1.4 m, fixed except during the swing; the subjects (a person in A, a car and city in B) do not move
+//   - Alternates A→B and B→A every 4.7 s (9.4 s for the round trip); top-right readout shows "A → B" / "B → A"
+// When to use it: To change location or topic while keeping the energy up.
+// Tags: whip pan, swish pan, motion blur, fast pan, transition, energy
+// Size: 539x208 px · Cycle: 9.4 s
+// Needs: kit camera -> https://showheyohtaki.github.io/motion-prompt/api/v1/kit/camera.js
+// Live demo: https://showheyohtaki.github.io/motion-prompt/#043
+//
+// cells[i](k, w, h, u): k = CanvasRenderingContext2D (already cleared and wrapped in save/restore by the caller), w,h = size, u = seconds in [0, cycle). The picture depends only on u.
+// Element code starts here. CELLS, constants and helpers live in the kit.
+
+// @element 19
+// 19 ホイップパン（ブレで次の場面へ）
+CELLS[18] = shot(abCell((k, w, h, u, A, B) => {
+  const t0 = 1.7, t1 = 2.5;
+  const at = (kk, s) => {   // s: 0..1 の進み。前半 A を右へ振り、後半 B が左から止まる
+    if (s < .5) world(kk, w, h, cam({ y: 1.4, yaw: eIOs(s * 2) * 0.45 }), A === sceneA ? { person: { x: -0.6, z: 7 } } : SB);
+    else world(kk, w, h, cam({ y: 1.4, yaw: -(1 - eIOs((s - .5) * 2)) * 0.45 }), B === sceneA ? { person: { x: -0.6, z: 7 } } : SB);
+  };
+  if (u < t0) return A(k, w, h);
+  if (u > t1) return B(k, w, h);
+  const s = P(u, t0, t1), ds = 1 / FPS / (t1 - t0);
+  mblur(k, at, clamp(s - ds * 1.6), clamp(s + ds * 1.6), 9);
+}));
+
+return CELLS;
+})();
+demos.motion = (()=>{
+// Motion Prompt #001-024 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#001
+//
+// Kit for pack "motion" (Motion graphics moves / モーショングラフィックスの動き): the constants and helpers its elements share.
+// Elements #001-024 · 539x208 px · cycle 4.7 s. Element code: https://showheyohtaki.github.io/motion-prompt/api/v1/en/e/<id>.txt (or /ja/).
+//
+// Run one element standalone in a browser:
+//   1. paste this file into a <script>,
+//   2. paste the element code below it (it assigns CELLS[n - 1], n = the element number inside the pack),
+//   3. then add:
+//        const c = document.createElement('canvas'); c.width = 539; c.height = 208; document.body.append(c);
+//        const k = c.getContext('2d'), cell = CELLS.find(Boolean), t0 = performance.now();
+//        (function loop() {
+//          const u = ((performance.now() - t0) / 1000) % 4.7;   // seconds, 0 <= u < 4.7
+//          k.setTransform(1, 0, 0, 1, 0, 0); k.clearRect(0, 0, 539, 208);
+//          k.save(); cell(k, 539, 208, u); k.restore();
+//          requestAnimationFrame(loop);
+//        })();
+// Every cell is a pure function of u, so the same call renders video frames: u = frame / fps.
+
+// @kit
+// モーショングラフィックスの演出の名前 24（各カード 539x208・4.7秒周期。各コマは時間 u の純関数）
+// カードの中だけ共通パレット（濃紺の地＋青・コーラル・黄・ミント）。
+const CW = 539, CH = 208;
+const CYC = 4.7;                          // 各カードは4.7秒周期（ループの継ぎ目なし）
+const C = {
+  navy: '#0F1A3D', navy2: '#1B2A5E', navy3: '#2A3D80', dim: '#7F90C4',
+  blue: '#3B7BFF', coral: '#FF6B5C', yel: '#FFC83D', mint: '#2EDBA8', white: '#FFFFFF', cream: '#FFF1D6'
+};
+const PAL = [C.blue, C.coral, C.yel, C.mint];
+const JP = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif';
+const DISP = '"Avenir Next", "Helvetica Neue", system-ui, sans-serif';
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, x) => a + (b - a) * x;
+const P = (t, a, b) => clamp((t - a) / (b - a));
+const eIO = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const eIOs = x => x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+const eOut = x => 1 - Math.pow(1 - x, 3);
+const eOut5 = x => 1 - Math.pow(1 - x, 5);
+const eIn = x => x * x * x;
+const smooth = x => x * x * (3 - 2 * x);
+const mod = (a, n) => ((a % n) + n) % n;
+const backOut = (x, s = 1.70158) => 1 + (s + 1) * Math.pow(x - 1, 3) + s * Math.pow(x - 1, 2);
+const backIn = (x, s = 1.70158) => (s + 1) * x * x * x - s * x * x;
+const spring = (t, w = 14, d = 7) => t <= 0 ? 0 : 1 - Math.exp(-d * t) * Math.cos(w * t);   // 0→行き過ぎ→1
+function mkCanvas(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+function rr(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); }
+function txt(ctx, s, x, y, font, col, align = 'left', base = 'alphabetic', ls = '0px') {
+  ctx.font = font; ctx.fillStyle = col; ctx.textAlign = align; ctx.textBaseline = base; ctx.letterSpacing = ls; ctx.fillText(s, x, y); ctx.letterSpacing = '0px';
+}
+function rand(seed) { let s = seed >>> 0; return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+function hex(c) { return [parseInt(c.slice(1, 3), 16), parseInt(c.slice(3, 5), 16), parseInt(c.slice(5, 7), 16)]; }
+function mix(a, b, t) { const A = hex(a), B = hex(b); return `rgb(${Math.round(lerp(A[0], B[0], t))},${Math.round(lerp(A[1], B[1], t))},${Math.round(lerp(A[2], B[2], t))})`; }
+function bez(x1, y1, x2, y2) {
+  const cx_ = 3 * x1, bx = 3 * (x2 - x1) - cx_, ax = 1 - cx_ - bx;
+  const cy_ = 3 * y1, by = 3 * (y2 - y1) - cy_, ay = 1 - cy_ - by;
+  const sx = t => ((ax * t + bx) * t + cx_) * t, sy = t => ((ay * t + by) * t + cy_) * t;
+  return x => { if (x <= 0) return 0; if (x >= 1) return 1; let lo = 0, hi = 1, t = x; for (let i = 0; i < 40; i++) { if (sx(t) < x) lo = t; else hi = t; t = (lo + hi) / 2; } return sy(t); };
+}
+function star(k, x, y, R, rot = 0, inner = 0.5, n = 5) { k.beginPath(); for (let i = 0; i < n * 2; i++) { const r = i % 2 ? R * inner : R, a = rot - Math.PI / 2 + i * Math.PI / n; const px = x + Math.cos(a) * r, py = y + Math.sin(a) * r; i ? k.lineTo(px, py) : k.moveTo(px, py); } k.closePath(); }
+function heartPath(k, s) { k.beginPath(); k.moveTo(0, s * 0.92); k.bezierCurveTo(-s * 1.75, -s * 0.12, -s * 0.85, -s * 1.2, 0, -s * 0.42); k.bezierCurveTo(s * 0.85, -s * 1.2, s * 1.75, -s * 0.12, 0, s * 0.92); k.closePath(); }
+const G0 = mkCanvas(CW, CH), GK0 = G0.getContext('2d', { willReadFrequently: true });
+const G1 = mkCanvas(CW, CH), GK1 = G1.getContext('2d', { willReadFrequently: true });
+function stage(k, col = C.navy) { k.fillStyle = col; k.fillRect(0, 0, CW, CH); }
+// ぬるっとつながる形（描く→ぼかす→しきい値）。paint(ctx) で色を塗った結果のキャンバスを返す
+function goo(draw, blur, paint) {
+  GK0.setTransform(1, 0, 0, 1, 0, 0); GK0.clearRect(0, 0, CW, CH); GK0.fillStyle = '#fff'; draw(GK0);
+  GK1.setTransform(1, 0, 0, 1, 0, 0); GK1.globalCompositeOperation = 'source-over'; GK1.clearRect(0, 0, CW, CH);
+  GK1.filter = `blur(${blur}px)`; GK1.drawImage(G0, 0, 0); GK1.filter = 'none';
+  const im = GK1.getImageData(0, 0, CW, CH), d = im.data;
+  for (let i = 3; i < d.length; i += 4) { const a = d[i]; d[i] = a < 112 ? 0 : a > 144 ? 255 : (a - 112) * 8; }
+  GK1.putImageData(im, 0, 0);
+  GK1.globalCompositeOperation = 'source-atop'; paint(GK1); GK1.globalCompositeOperation = 'source-over';
+  return G1;
+}
+function chars(k, s, font, ls = 0) { k.font = font; const ws = [...s].map(ch => k.measureText(ch).width + ls); const tot = ws.reduce((a, b) => a + b, 0) - ls; let x = -tot / 2; return [...s].map((ch, i) => { const o = { ch, x: x + (ws[i] - ls) / 2, w: ws[i] - ls }; x += ws[i]; return o; }); }
+const CELLS = [];
+
+// @shared
+// 画面A＝昼（クリーム・コーラルの太陽）／画面B＝夜（濃紺・黄色の月）。A→B→A で1周期
+const SUN = [112, 104], MOON = [CW - 112, 104];
+function scrA(k, w, h) {
+  k.fillStyle = C.cream; k.fillRect(0, 0, w, h);
+  k.fillStyle = '#FFD9A8'; k.beginPath(); k.arc(SUN[0], SUN[1], 66, 0, 7); k.fill();
+  k.fillStyle = C.coral; k.beginPath(); k.arc(SUN[0], SUN[1], 44, 0, 7); k.fill();
+  txt(k, 'DAY', 214, h / 2 + 4, `800 96px ${DISP}`, C.navy, 'left', 'middle', '2px');
+  k.fillStyle = '#fff'; rr(k, 400, 34, 96, 26, 13); k.fill(); rr(k, 430, 20, 50, 26, 13); k.fill();
+}
+function scrB(k, w, h) {
+  k.fillStyle = '#16255A'; k.fillRect(0, 0, w, h);
+  k.fillStyle = '#fff';[[40, 30, 3], [150, 170, 2.5], [250, 24, 2.5], [330, 180, 3], [500, 30, 2.5], [20, 150, 2], [300, 100, 0]].forEach(s => { k.beginPath(); k.arc(s[0], s[1], s[2], 0, 7); k.fill(); });
+  k.fillStyle = C.yel; k.beginPath(); k.arc(MOON[0], MOON[1], 46, 0, 7); k.fill();
+  k.fillStyle = '#16255A'; k.beginPath(); k.arc(MOON[0] + 22, MOON[1] - 14, 38, 0, 7); k.fill();
+  txt(k, 'NIGHT', 40, h / 2 + 4, `800 88px ${DISP}`, '#fff', 'left', 'middle', '1px');
+}
+const SCR = [scrA, scrB];
+const SEG3 = CYC / 2;
+function abCell(trans) { return (k, w, h, u) => { const sgi = Math.min(1, Math.floor(u / SEG3)), uu = u - sgi * SEG3; trans(k, w, h, uu, sgi, 1 - sgi); }; }
+const TA = 0.5, TB = 1.5;
+
+// Motion Prompt #005 · MIT License (c) 2026 Shohei Ohtaki · https://showheyohtaki.github.io/motion-prompt/#005
+//
+// Mask reveal / マスクリビール
+// Pack: motion (Motion graphics moves) · element 05 · Category: Entrances & text
+// What happens: Headline text slides out from behind an invisible edge marked by a single line.
+// Motion spec:
+//   - One pass per 2.35 s. Divider line (coral, 380 × 6, y = 124): grows from the centre at 0.1–0.5 s (cubic ease-in-out), shrinks away at 2.05–2.3 s.
+//   - Top text (bold 98 px, white): clipped to the area above the line (y 8–119); moves up into place from 120 px below at 0.35–1.0 s, quintic ease-out.
+//   - Bottom text (32 px, yellow): clipped to the area below the line (y 129–181); moves down into place from 60 px above at 0.55–1.15 s, quintic ease-out.
+//   - Exit: top text moves 150 px up at 1.7–2.05 s (backIn, s = 1.2, dipping slightly first); bottom text moves 70 px down at 1.75–2.05 s (cubic ease-in).
+//   - Opacity never changes; the text is hidden only by leaving the clip area.
+// When to use it: Use it for titles and headings that should appear in a clean, composed way.
+// Tags: mask, reveal, clip, wipe, title, text, slide-up, headline
+// Size: 539x208 px · Cycle: 4.7 s
+// Needs: kit motion -> https://showheyohtaki.github.io/motion-prompt/api/v1/kit/motion.js
+// Live demo: https://showheyohtaki.github.io/motion-prompt/#005
+//
+// cells[i](k, w, h, u): k = CanvasRenderingContext2D (already cleared and wrapped in save/restore by the caller), w,h = size, u = seconds in [0, cycle). The picture depends only on u.
+// Element code starts here. CELLS, constants and helpers live in the kit.
+
+// @element 05
+// 05 マスクリビール（見えない枠＝線の向こうから、見出しがせり上がる）
+CELLS[4] = (k, w, h, u) => {
+  stage(k);
+  const T = CYC / 2, lu = mod(u, T), X = w / 2, LY = 124;
+  const lg = eIO(P(lu, 0.1, 0.5)) * (1 - eIO(P(lu, 2.05, 2.3)));
+  // 上の段：線の下から上へ
+  const up = (1 - eOut5(P(lu, 0.35, 1.0))) * 120 + backIn(P(lu, 1.7, 2.05), 1.2) * -150;
+  k.save(); k.beginPath(); k.rect(0, 8, w, LY - 8 - 5); k.clip();
+  txt(k, 'Hello!', X, LY - 14 + up, `800 98px ${DISP}`, '#fff', 'center', 'alphabetic', '1px');
+  k.restore();
+  // 下の段：線の上から下へ
+  const dn = (1 - eOut5(P(lu, 0.55, 1.15))) * -60 + eIn(P(lu, 1.75, 2.05)) * 70;
+  k.save(); k.beginPath(); k.rect(0, LY + 5, w, 52); k.clip();
+  txt(k, 'はじめまして', X, LY + 44 + dn, `700 32px ${JP}`, C.yel, 'center', 'alphabetic', '6px');
+  k.restore();
+  if (lg > 0.005) { k.fillStyle = C.coral; rr(k, X - 190 * lg, LY - 3, 380 * lg, 6, 3); k.fill(); }
+};
+
+return CELLS;
+})();
+</script>
+<script>
+const feature={};
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const smooth=(a,b,x)=>{x=clamp((x-a)/(b-a));return x*x*(3-2*x)};
+const noise=(n)=>{let a=Math.sin(n*73.194+15.454)*75358.128;return a-Math.floor(a);};
+function shape(k, pts, color){
+ k.fillStyle=color;k.beginPath();pts.forEach(([x,y],i)=>i?k.lineTo(x,y):k.moveTo(x,y));k.closePath();k.fill();
+}
+function grad(k,x,y,x2,y2,stops){const g=k.createLinearGradient(x,y,x2,y2);stops.forEach(([a,b])=>g.addColorStop(a,b));return g;}
+function label(k,text,x,y,color='#f4e6c8',size=12){k.fillStyle=color;k.font='600 '+size+'px ui-monospace, monospace';k.fillText(text,x,y);}
+// 107 / Camera moves along the optical axis; all planes share the same vanishing point.
+function atlas107Scale(depth, travel){return depth/(depth-travel);}
+function atlas107Travel(t){
+ const z=t/6.8;
+ return .89*(flow(0,.53,z)-flow(.565,1,z));
+}
+function atlas107Water(x,y,travel){
+ const vx=387,vy=218,depth=274/(y-vy),s=atlas107Scale(depth,travel);
+ return [vx+(x-vx)*s,vy+(y-vy)*s,s];
+}
+function atlas107Pine(k,x,y,h,col,seed){
+ k.save();k.translate(x,y);k.scale(h/100,h/100);
+ const n=i=>noise(seed+i), bend=12*(n(5)-.5);
+ shape(k,[[-3,0],[bend-1,-92],[bend+1,-99],[4,0]],col);
+ for(let j=0;j<10;j++){
+  const d=j/9, yy=-94+75*d, x=bend*(1-d), rad=3+27*d;
+  const l=rad*(.68+n(j)*.48),r=rad*(.68+n(j+20)*.48);
+  k.beginPath();k.moveTo(x,yy-10);
+  k.quadraticCurveTo(x-l*.47,yy+1,x-l,yy+9);
+  k.quadraticCurveTo(x-l*.62,yy+11,x-l*.49,yy+8);
+  k.lineTo(x-l*.57,yy+15);k.quadraticCurveTo(x,yy+12,x+r*.55,yy+15);
+  k.lineTo(x+r*.42,yy+9);k.quadraticCurveTo(x+r*.63,yy+13,x+r,yy+8);
+  k.quadraticCurveTo(x+r*.38,yy+1,x,yy-10);k.fillStyle=col;k.fill();
+ }
+ k.restore();
+}
+feature.a107=(k,w,h,t)=>{
+ const vx=387,vy=218, move=atlas107Travel(t);
+ const plane=(depth,fn)=>{
+  const s=atlas107Scale(depth,move);k.save();k.translate(vx,vy);k.scale(s,s);k.translate(-vx,-vy);fn();k.restore();
+ };
+ k.fillStyle=grad(k,0,0,0,400,[[0,'#243d4a'],[.22,'#54747e'],[.53,'#dbab8a'],[.70,'#edbc96'],[1,'#648887']]);k.fillRect(0,0,w,h);
+ plane(32,()=>{
+  const sky=k.createRadialGradient(482,134,6,482,134,172);
+  sky.addColorStop(0,'#ffcea3b0');sky.addColorStop(.5,'#f6a88c4a');sky.addColorStop(1,'#ffe7af00');
+  k.fillStyle=sky;k.fillRect(290,-48,400,380);
+  dot(k,482,134,31,'#f8dbaf');
+  for(let i=0;i<15;i++){
+   const y=73+i*8.5,x=-45+noise(i+29)*600,len=45+noise(i+76)*190;
+   k.fillStyle=grad(k,x,0,x+len,0,[[0,'#ffedd800'],[.52,'#ffedd845'],[1,'#ffedd800']]);
+   k.beginPath();k.ellipse(x+len*.5,y,len*.5,.6+noise(i+10)*1.9,-.021,0,Math.PI*2);k.fill();
+  }
+ });
+ function ridge(points,color,snow){
+  const under=grad(k,0,108,0,319,[[0,color],[.8,'#82989b'],[1,'#b7a59c']]);
+  shape(k,[...points,[965,430],[-245,430]],under);
+  if(snow)for(const [x,y,b] of [[91,142,45],[223,118,64],[555,145,51],[641,125,50]]){
+   shape(k,[[x,y],[x+b*.34,y+14],[x+b*.76,y+41],[x+b*.17,y+23],[x+b*.22,y+38],[x-4,y+18],[x-b*.41,y+29]],'#e4c6b475');
+   shape(k,[[x,y],[x-6,y+19],[x-b*.18,y+48],[x-b*.53,y+54],[x-b*.41,y+29]],'#52657385');
+  }
+ }
+ plane(17,()=>ridge([[-240,228],[-60,191],[-2,169],[49,184],[91,142],[150,180],[181,176],[223,118],[245,134],[276,169],[312,186],[347,170],[420,203],[474,181],[506,188],[555,145],[584,173],[641,125],[710,184],[775,166],[912,200]],'#617989',true));
+ plane(10,()=>ridge([[-230,230],[-41,202],[42,192],[93,202],[145,193],[213,225],[266,224],[310,236],[354,223],[411,241],[475,221],[521,225],[609,190],[640,196],[699,171],[755,194],[920,190]],'#537d80'));
+ // Inverse projection of a horizontal plane: base screen row encodes world depth.
+ const lake=grad(k,0,242,0,400,[[0,'#a6aaa0'],[.33,'#6f9290'],[.74,'#375d65'],[1,'#274650']]);
+ k.fillStyle=lake;k.fillRect(0,atlas107Water(387,244,move)[1],720,400);
+ const drawRipple=(x,y,l,weight,bright)=>{
+  const [px,py,s]=atlas107Water(x,y,move),span=l*s;
+  if(py>401||px>721||px+span<0)return;
+  const hue=bright?'255,199,148':'198,217,201';
+  k.fillStyle=grad(k,px,0,px+span,0,[[0,`rgba(${hue},0)`],[.47,`rgba(${hue},${weight})`],[1,`rgba(${hue},0)`]]);
+  k.fillRect(px,py,span,(.5+.85*(y-246)/155)*s);
+ };
+ for(let i=0;i<178;i++){
+  const u=(i+1)/179,y=248+156*u,x=-38+noise(i+40)*798;
+  drawRipple(x,y,(12+noise(i+215)*87)*(.22+.82*u),i%6?.27:.42,i%6===0);
+ }
+ for(let i=0;i<38;i++){
+  const u=(i+1)/39,y=250+154*u,x=479+(noise(i+593)-.5)*(36+u*146),l=6+noise(i+88)*u*37;
+  drawRipple(x,y,l,i%4?.42:.57,true);
+ }
+ plane(5.1,()=>{
+  shape(k,[[-255,214],[-38,204],[77,216],[137,223],[190,244],[240,256],[309,258],[328,266],[229,275],[103,279],[-248,291]],'#385f60');
+  shape(k,[[403,259],[460,249],[508,244],[573,217],[648,203],[729,198],[919,179],[929,278],[643,282],[514,268]],'#355858');
+  for(let i=0;i<66;i++){const x=-44+i*12;if(x>225&&x<501)continue;const y=x<225?211+(x+45)*.24:252-(x-500)*.22;atlas107Pine(k,x,y,11+noise(i)*27,i%5?'#335b5c':'#426a66',978+i);}
+  const haze=grad(k,0,233,0,281,[[0,'#e7bfaa00'],[.48,'#e9d4bd72'],[1,'#d9cfb700']]);k.fillStyle=haze;k.fillRect(-130,233,980,48);
+ });
+ plane(3.2,()=>{
+  // Island, reflected roof and warm window remain attached to one middle plane.
+  const land=[[237,295],[262,287],[295,285],[324,277],[371,275],[400,281],[419,280],[444,286],[418,295],[357,306],[279,307]];
+  shape(k,land.map(([x,y])=>[x,596-y]),'#33545c68');
+  shape(k,land,'#24474c');line(k,[[241,296],[287,302],[359,304],[415,293]],'#b0b19c70',1);
+  for(let i=0;i<10;i++){const x=250+i*16;if(x>332&&x<390)continue;atlas107Pine(k,x,289-noise(i)*5,17+noise(i+98)*26,i%3?'#26484d':'#365957',285+i);}
+  shape(k,[[329,261],[384,258],[386,281],[330,282]],'#203c40');
+  shape(k,[[326,261],[343,252],[354,237],[367,235],[387,253],[395,256],[386,260],[343,263]],'#233a40');
+  shape(k,[[329,260],[343,250],[356,237],[366,235],[353,251],[342,262]],'#a68c74');
+  line(k,[[324,262],[344,262],[390,258]],'#d7b3959b',1);
+  rr(k,347,265,23,13,1,'#f2b378');k.fillStyle='#7e503e';k.fillRect(357,265,2,13);
+  for(let i=0;i<8;i++) {const x=347+noise(i+560)*22;k.fillStyle='#ffbe7c42';k.fillRect(x,290+i*1.9,4+noise(i+40)*14,1.2);}
+ });
+ plane(1.95,()=>{
+  shape(k,[[-225,285],[-28,290],[23,311],[104,318],[154,347],[219,361],[269,400],[-240,456]],'#19383d');
+  shape(k,[[545,428],[581,388],[627,369],[667,327],[725,298],[938,279],[955,441]],'#1b393e');
+  for(let i=0;i<28;i++){const left=i<15,x=left?-32+i*15:572+(i-15)*16,y=left?303+(x+36)*.38:373-(x-572)*.35;atlas107Pine(k,x,y,18+noise(i+300)*64,i%3?'#1e4245':'#315450',i+845);}
+ });
+ plane(1.34,()=>{
+  shape(k,[[-150,345],[28,357],[88,375],[160,408],[234,470],[-180,470]],'#102830');
+  shape(k,[[609,432],[667,378],[711,356],[777,336],[904,331],[914,470]],'#132c33');
+  [[60,387,246,-12],[19,372,150,0],[117,408,111,40],[677,378,205,53],[639,401,123,85],[722,351,205,92]].forEach(([x,y,h,n])=>atlas107Pine(k,x,y,h,'#112a31',n));
+ });
+ const shade=k.createRadialGradient(386,211,145,386,211,450);shade.addColorStop(0,'#13202a00');shade.addColorStop(1,'#10202b58');k.fillStyle=shade;k.fillRect(0,0,w,h);
+};
+
+// 159 / Sample a moving virtual slit at earlier times for farther layers.
+// A fixed lens and fixed vanishing point, not a set of static wedges.
+const atlas159Banks=[
+ [-2.93,.24,.62,[73,133,162]],[-2.47,.15,.92,[237,127,87]],[-2.17,.085,.72,[252,173,112]],
+ [-1.58,.083,.44,[81,155,170]],[-1.23,.22,.61,[52,125,148]],[-.69,.11,.88,[108,203,191]],
+ [-.41,.17,.95,[184,228,193]],[.105,.19,.45,[93,154,155]],[.48,.175,.76,[211,131,94]],
+ [.91,.21,.89,[255,169,109]],[1.19,.13,.76,[248,202,137]],[1.76,.17,.46,[108,135,164]],
+ [2.33,.22,.74,[157,100,126]],[2.73,.088,.53,[236,144,149]]];
+function atlas159Scan(j,phase,q){
+ const [a,b,strength,rgb]=atlas159Banks[j], wind=phase-q*5.9;
+ const burst=Math.pow(.5+.5*Math.sin(wind*2+a*3.5),8);
+ const density=.25+.44*(.5+.5*Math.sin(wind+a*2.1))+.45*burst;
+ return [a+.054*Math.sin(wind+a)+.014*Math.sin(wind*2+a*3), b*(.87+.24*Math.sin(wind+a*4.7)+.30*burst), strength*density, rgb,burst];
+}
+feature.a159=(k,w,h,t)=>{
+ const f=t>=5.8?0:t/5.8*Math.PI*2, x0=365,y0=205,N=39;
+ const bg=k.createRadialGradient(x0,y0,2,x0,y0,412);bg.addColorStop(0,'#253e41');bg.addColorStop(.14,'#15232d');bg.addColorStop(.45,'#0d151e');bg.addColorStop(1,'#070e16');k.fillStyle=bg;k.fillRect(0,0,w,h);
+ const XY=(a,r)=>[x0+Math.cos(a)*r*1.66,y0+Math.sin(a)*r];
+ k.globalCompositeOperation='screen';
+ for(let j=0;j<atlas159Banks.length;j++){
+  const rows=[];
+  for(let i=0;i<=N;i++){const q=i/N,r=7*Math.pow(74,q),[a,b,l,[R,G,B],burst]=atlas159Scan(j,f,q);rows.push({a,b,r,l,R,G,B,burst});}
+  for(let lane=0;lane<4;lane++){
+   const d=[0,.22,-.30,.57][lane], thickness=[1.65,.54,.13,.075][lane], gain=[.12,.46,.67,.38][lane];
+   const {R,G,B}=rows[0];
+   k.fillStyle=grad(k,x0,y0,...XY(atlas159Banks[j][0],410),[[0,`rgba(${R},${G},${B},0)`],[.07,`rgba(${R},${G},${B},${gain*.64})`],[.53,`rgba(${R},${G},${B},${gain})`],[1,`rgba(${R},${G},${B},${gain*.62})`]]);
+   k.beginPath();
+   const edge=(p,sgn)=>XY(p.a+(d+sgn*thickness*(.63+.31*p.l))*p.b,p.r);
+   rows.forEach((p,i)=>{const xy=edge(p,1);i?k.lineTo(...xy):k.moveTo(...xy);});
+   for(let i=N;i>=0;i--)k.lineTo(...edge(rows[i],-1));
+   k.closePath();k.fill();
+  }
+  // Short exposure packets vary along the depth axis with the sampled source.
+  for(let i=4;i<N;i+=2){
+   const a=rows[i-2],m=rows[i-1],b=rows[i],peak=m.burst;
+   if(peak<.12)continue;
+   const from=XY(a.a+a.b*.14,a.r),to=XY(b.a+b.b*.14,b.r);
+   const color=grad(k,...from,...to,[[0,'transparent'],[.60,`rgba(${m.R},${m.G},${m.B},${peak*.57})`],[1,'transparent']]);
+   shape(k,[XY(a.a-a.b*.4,a.r),XY(m.a-m.b*.6,m.r),XY(b.a-b.b*.37,b.r),XY(b.a+b.b*.51,b.r),XY(m.a+m.b*.73,m.r),XY(a.a+a.b*.65,a.r)],color);
+  }
+  // Traveling highlights are finite streaks traced on the sampled ribbon, never on static screen rays.
+  for(let n=0;n<5;n++){
+   const q=(((f/(2*Math.PI)*(n%2+1)+noise(j*72+n*398))%1)+1)%1;
+   const span=.105+noise(j+68*n)*.13, end=Math.min(1,q+span), linePoints=[];
+   for(let i=0;i<=8;i++){const u=q+(end-q)*i/8,[a,b]=atlas159Scan(j,f,u);linePoints.push(XY(a+b*(.42+n*.16),7*Math.pow(74,u)));}
+   const a=linePoints[0],b=linePoints.at(-1),[R,G,B]=atlas159Banks[j][3];if(Math.hypot(a[0]-b[0],a[1]-b[1])<1)continue;
+   const alpha=.92*Math.sin(q*Math.PI)**.7;
+   const color=grad(k,...a,...b,[[0,`rgba(${R},${G},${B},0)`],[.6,`rgba(${R},${G},${B},${alpha*.5})`],[.95,`rgba(${Math.min(255,R+45)},${Math.min(255,G+50)},${Math.min(255,B+53)},${alpha})`],[1,`rgba(${R},${G},${B},0)`]]);
+   line(k,linePoints,color,1+5.3*q*q);
+   line(k,linePoints,color,.45+1.22*q*q);
+  }
+ }
+ k.globalCompositeOperation='source-over';
+ const core=k.createRadialGradient(x0,y0,0,x0,y0,21);core.addColorStop(0,'#fff8ed');core.addColorStop(.11,'#f5f8eade');core.addColorStop(.27,'#c9f0e39c');core.addColorStop(.5,'#76b4bd35');core.addColorStop(1,'#8fc6d200');
+ k.fillStyle=core;k.fillRect(313,153,104,104);
+ const edge=k.createRadialGradient(x0,y0,192,x0,y0,460);edge.addColorStop(0,'#070f1700');edge.addColorStop(1,'#080f197c');k.fillStyle=edge;k.fillRect(0,0,w,h);
+};
+
+// 133 / One typeface, one baseline. The actual O and Q counters are the transition mattes.
+// Vector outlines from DejaVu Sans Bold (DejaVu project, derived from Bitstream Vera).
+const atlasType={"glyph":{"L":{"svg":"M188 1493H573V291H1249V0H188Z","box":[188,0,1249,1493],"advance":1305},"O":{"svg":"M870 1241Q694 1241 597.0 1111.0Q500 981 500 745Q500 510 597.0 380.0Q694 250 870 250Q1047 250 1144.0 380.0Q1241 510 1241 745Q1241 981 1144.0 1111.0Q1047 1241 870 1241ZM870 1520Q1230 1520 1434.0 1314.0Q1638 1108 1638 745Q1638 383 1434.0 177.0Q1230 -29 870 -29Q511 -29 306.5 177.0Q102 383 102 745Q102 1108 306.5 1314.0Q511 1520 870 1520Z","box":[102,-29,1638,1520],"advance":1741,"hole":"M870 1241Q694 1241 597.0 1111.0Q500 981 500 745Q500 510 597.0 380.0Q694 250 870 250Q1047 250 1144.0 380.0Q1241 510 1241 745Q1241 981 1144.0 1111.0Q1047 1241 870 1241Z"},"U":{"svg":"M188 1493H573V598Q573 413 633.5 333.5Q694 254 831 254Q969 254 1029.5 333.5Q1090 413 1090 598V1493H1475V598Q1475 281 1316.0 126.0Q1157 -29 831 -29Q506 -29 347.0 126.0Q188 281 188 598Z","box":[188,-29,1475,1493],"advance":1663},"D":{"svg":"M573 1202V291H711Q947 291 1071.5 408.0Q1196 525 1196 748Q1196 970 1072.0 1086.0Q948 1202 711 1202ZM188 1493H594Q934 1493 1100.5 1444.5Q1267 1396 1386 1280Q1491 1179 1542.0 1047.0Q1593 915 1593 748Q1593 579 1542.0 446.5Q1491 314 1386 213Q1266 97 1098.0 48.5Q930 0 594 0H188Z","box":[188,0,1593,1493],"advance":1700},"Q":{"svg":"M911 -27H881Q512 -27 307.0 177.0Q102 381 102 745Q102 1108 306.5 1314.0Q511 1520 870 1520Q1233 1520 1435.5 1316.0Q1638 1112 1638 745Q1638 493 1530.5 311.0Q1423 129 1221 37L1522 -299H1155ZM870 1241Q694 1241 597.0 1111.0Q500 981 500 745Q500 505 595.0 377.5Q690 250 870 250Q1047 250 1144.0 380.0Q1241 510 1241 745Q1241 981 1144.0 1111.0Q1047 1241 870 1241Z","box":[102,-299,1638,1520],"advance":1741,"hole":"M870 1241Q694 1241 597.0 1111.0Q500 981 500 745Q500 505 595.0 377.5Q690 250 870 250Q1047 250 1144.0 380.0Q1241 510 1241 745Q1241 981 1144.0 1111.0Q1047 1241 870 1241Z"},"I":{"svg":"M188 1493H573V0H188Z","box":[188,0,573,1493],"advance":762},"E":{"svg":"M188 1493H1227V1202H573V924H1188V633H573V291H1249V0H188Z","box":[188,0,1249,1493],"advance":1399},"T":{"svg":"M10 1493H1386V1202H891V0H506V1202H10Z","box":[10,0,1386,1493],"advance":1397}},"kern":{"LO":-73,"OU":0,"UD":0,"QU":0,"UI":0,"IE":0,"ET":0}};
+const atlasGlyphs=Object.fromEntries(Object.entries(atlasType.glyph).map(([ch,g])=>[ch,{...g,path:new Path2D(g.svg),counter:g.hole?new Path2D(g.hole):null}]));
+const atlasFontScale=.089;
+function atlasWord(text, tracking){
+ let x=0;
+ const letters=[...text].map((ch,i)=>{
+  if(i)x+=(atlasType.kern[text[i-1]+ch]??0)+tracking;
+  const g=atlasGlyphs[ch], v={g,x};x+=g.advance;return v;
+ });
+ const lo=letters[0].g.box[0], hi=letters.at(-1).x+letters.at(-1).g.box[2], offset=360-atlasFontScale*(lo+hi)/2;
+ return letters.map(({g,x})=>({g,x:offset+x*atlasFontScale}));
+}
+const atlasLoud=atlasWord('LOUD',68), atlasQuiet=atlasWord('QUIET',72);
+function atlas133Details(k,first){
+ const ink=first?'#252f2a':'#efe5cc', dim=first?'#68675a':'#a9b9ac', rule=first?'#aba38b':'#5e796d', accent=first?'#a9442f':'#f3b37e';
+ line(k,[[38,73],[681,73]],rule);line(k,[[38,306],[681,306]],rule);
+ label(k,first?'01 / ACCENT':'02 / REST',40,56,ink,13);
+ label(k,'TYPE STUDY',597,56,dim,12);
+ word(k,first?'重音落下':'留出一拍',40,348,28,ink,700,'"PingFang SC","Noto Sans CJK SC",sans-serif');
+ [594,613,632,651,670].forEach((x,i)=>line(k,[[x,350],[x,350-(first?[8,14,31,14,8]:[6,9,13,9,6])[i]]],i===2?accent:rule,2));
+}
+function atlas133Paper(k,first,marks=1){
+ k.fillStyle=grad(k,0,0,720,400,first?[[0,'#f5eace'],[1,'#e8d5ac']]:[[0,'#152c2a'],[1,'#23453d']]);
+ k.fillRect(0,0,720,400);
+ if(marks>0){k.save();k.globalAlpha*=marks;atlas133Details(k,first);k.restore();}
+}
+function atlas133Ink(k,g,x,y,sx,sy,ink){
+ k.save();k.translate(x,y);k.scale(atlasFontScale*sx,-atlasFontScale*sy);
+ k.fillStyle=ink;k.fill(g.path,'evenodd');k.restore();
+}
+function atlas133Center(g,baseX,baseY){
+ return [baseX+(g.box[0]+g.box[2])*atlasFontScale*.5,baseY-(g.box[1]+g.box[3])*atlasFontScale*.5];
+}
+function atlas133Portal(k,letter,phase,ink,target){
+ const {g,x}=letter,[cx,cy]=atlas133Center(g,x,275),s=1+17.4*phase;
+ const ox=mix(cx,360,phase),oy=mix(cy,195,phase);
+ const tx=ox-(cx-x)*s,ty=oy-(cy-275)*s;
+ atlas133Ink(k,g,tx,ty,s,s,ink);
+ k.save();k.translate(tx,ty);k.scale(atlasFontScale*s,-atlasFontScale*s);
+ k.clip(g.counter);k.setTransform(1,0,0,1,0,0);target(ox,oy);k.restore();
+}
+// Rightmost letters leave first. A shared travel distance keeps every pair in order.
+function atlas133Exit(i,exit){
+ const stagger=(4-i)*.063;
+ return 550*flow(.025+stagger,.75+stagger,exit);
+}
+function atlas133ReturnTint(exit){
+ const p=flow(.035,.45,exit), target=[207,138,108];
+ return 'rgb('+target.map((v,i)=>Math.round(mix([246,233,204][i],v,p))).join(',')+')';
+}
+feature.a133=(k,w,h,t)=>{
+ const z=t/5.8;
+ const quick=(v)=>1-(1-clamp(v))**3;
+ const loudColor='#29352d',oColor='#a44633', quietColor='#f6e9cc';
+ const opening=()=>atlas133Paper(k,true);
+ const rest=(reveal=1,x=360,y=195,exit=0,rawQ=true,marks=1,typeAlpha=1)=>{
+  atlas133Paper(k,false,marks);
+  const scale=.22+.78*reveal;
+  k.save();k.globalAlpha*=typeAlpha;k.translate(x,y);k.scale(scale,scale);k.translate(-360,-208);
+  atlasQuiet.forEach(({g,x},i)=>{
+   if(i===0&&!rawQ)return;
+   const drift=atlas133Exit(i,exit);
+   const grain=1-reveal; 
+   atlas133Ink(k,g,x+(i-2)*-9*grain+drift,288+12*grain-drift*.047,1,1,i===2?'#f2b181':quietColor);
+  });k.restore();
+ };
+ if(z>=.98||z===0){opening();return;}
+ if(z>=.835){
+  const exit=(z-.835)/.145, aperture=flow(.27,1,exit);
+  if(aperture>=.999999){opening();return;}
+  rest(1,360,195,exit,false);
+  atlas133Portal(k,atlasQuiet[0],aperture,atlas133ReturnTint(exit),()=>{
+   k.globalAlpha=flow(.08,.34,exit);opening();
+  });
+  return;
+ }
+ if(z>=.625){rest();return;}
+ opening();
+ if(z<.425){
+  k.save();k.beginPath();k.rect(38,75,644,230);k.clip();
+  atlasLoud.forEach(({g,x},i)=>{
+   if(i===1&&z>=.395)return;
+   const hit=.102+i*.013, fall=quick((z-(hit-.055))/.055);
+   if(fall<=0)return;
+   const squash=flow(hit,hit+.021,z)-flow(hit+.022,hit+.075,z);
+   const kick=flow(hit,hit+.028,z)-flow(hit+.034,hit+.122,z);
+   const leave=flow(.365+i*.004,.425,z);
+   atlas133Ink(k,g,x+(i-1.6)*17*kick+ (i<1?-210:240)*leave,275-240*(1-fall)-265*leave,1+.095*squash,1-.19*squash,i===1?oColor:loudColor);
+  });k.restore();
+ }
+ if(z>=.395){
+  const aperture=flow(.395,.625,z);
+  atlas133Portal(k,atlasLoud[1],aperture,oColor,(ox,oy)=>{
+   const unfold=flow(.455,.62,z);
+   k.globalAlpha=flow(.398,.43,z);rest(unfold,mix(ox,360,unfold),mix(oy,195,unfold),0,true,flow(.515,.618,z),flow(.445,.478,z));
+  });
+ }
+};
+
+// Quintic ramps give both velocity and acceleration continuous endpoints.
+const flow=(a,b,t)=>{const v=clamp((t-a)/(b-a));return v*v*v*(10+v*(-15+6*v));};
+const mix=(a,b,t)=>a+(b-a)*t;
+function roundPoly(k,points,r,fill,stroke){
+  k.beginPath();
+  points.forEach((p,i)=>{
+    const a=points[(i+points.length-1)%points.length],b=points[(i+1)%points.length];
+    const ta=Math.min(.4,r/Math.max(1,Math.hypot(a[0]-p[0],a[1]-p[1]))),tb=Math.min(.4,r/Math.max(1,Math.hypot(b[0]-p[0],b[1]-p[1])));
+    const x=mix(p[0],a[0],ta),y=mix(p[1],a[1],ta);
+    i?k.lineTo(x,y):k.moveTo(x,y);k.quadraticCurveTo(p[0],p[1],mix(p[0],b[0],tb),mix(p[1],b[1],tb));
+  });
+  k.closePath();k.fillStyle=fill;k.fill();if(stroke){k.strokeStyle=stroke;k.lineWidth=1;k.stroke();}
+}
+function line(k, pts, color, width=1){
+ k.beginPath();pts.forEach(([x,y],i)=>i?k.lineTo(x,y):k.moveTo(x,y));k.strokeStyle=color;k.lineWidth=width;k.stroke();
+}
+function rr(k,x,y,w,h,r,color){k.beginPath();k.roundRect(x,y,w,h,r);k.fillStyle=color;k.fill();}
+function dot(k,x,y,r,color){k.beginPath();k.arc(x,y,r,0,Math.PI*2);k.fillStyle=color;k.fill();}
+function word(k,s,x,y,size,clr,weight=800,family='system-ui,sans-serif'){k.font=weight+' '+size+'px '+family;k.fillStyle=clr;k.fillText(s,x,y);}
+
+
+function newspaper(k,x,y,w,h,r,mark){
+ k.save();k.translate(x,y);k.rotate(r);
+ k.shadowColor='#2e242046';k.shadowBlur=6;k.shadowOffsetX=3;k.shadowOffsetY=4;
+ shape(k,[[0,3],[w-3,0],[w,h-3],[w*.67,h],[w*.3,h-3],[0,h]],'#f8e8bc');
+ k.shadowColor='transparent';
+ if(mark)word(k,mark,10,24,18,'#293e39',850,'serif');
+ for(let i=0;i<4;i++)line(k,[[11,32+i*5],[w-15-noise(i)*16,32+i*5]],'#6d645988',1);
+ k.restore();
+}
+
+
+
+
+
+
+
+// Six revised motion studies. The original reference cards keep their own renderers.
+const speedCurve=(a,b,t)=>{const u=clamp((t-a)/(b-a));return (1-Math.cos(Math.PI*u))*.5;};
+const oval=(k,x,y,rx,ry,fill)=>{k.beginPath();k.ellipse(x,y,rx,ry,0,0,Math.PI*2);k.fillStyle=fill;k.fill();};
+const softShadow=(k,x,y,rx,ry,a)=>{
+ k.save();k.translate(x,y);k.scale(rx,ry);
+ const g=k.createRadialGradient(0,0,0,0,0,1);g.addColorStop(0,'rgba(18,29,31,'+a+')');g.addColorStop(1,'rgba(18,29,31,0)');
+ k.fillStyle=g;k.fillRect(-1,-1,2,2);k.restore();
+};
+feature.s01=(k,w,h,t)=>{
+ const z=t/5.6;
+ const lock=.946, r=speedCurve(.12,.44,z)*(1-speedCurve(.64,.926,z));
+ const strike=z<.926?4:4*(1-Math.pow(clamp((z-.926)/(lock-.926)),2.45));
+ const clap=z<lock?0:1.45*Math.exp(-84*(z-lock))*Math.sin((z-lock)*180);
+ const travel=[-162,-80,0,82,166];
+ const move=travel.map(x=>x*r);
+ const scale=1.18-.18*(speedCurve(.12,.54,z)-speedCurve(.71,1,z));
+ const bg=grad(k,0,0,600,400,[[0,'#f7eee0'],[.66,'#e7dbc9'],[1,'#c6b8a3']]);
+ k.fillStyle=bg;k.fillRect(0,0,w,h);
+ const P=(x,y,d)=>[360+clap+(x*.83+y*.18+d)*scale,196+clap*.42+(-x*.225+y*.81+d*.35)*scale];
+ const quad=(d,x,y,W,H)=>[P(x,y,d),P(x+W,y,d),P(x+W,y+H,d),P(x,y+H,d)];
+ function solid(d,x,y,W,H,Z,a,b,c,r=6){
+  const A=quad(d,x,y,W,H),B=quad(d+Z,x,y,W,H);
+  roundPoly(k,B,r,b);
+  shape(k,[A[0],A[1],B[1],B[0]],b);shape(k,[A[1],A[2],B[2],B[1]],c);
+  shape(k,[A[2],A[3],B[3],B[2]],c);shape(k,[A[3],A[0],B[0],B[3]],b);
+  roundPoly(k,A,r,a,'#26343344');
+  line(k,[P(x+9,y+1,d),P(x+W-9,y+1,d)],'#fff5d95e',1.25);
+ }
+ function disc(d,x,y,r,c){shape(k,Array.from({length:56},(_,j)=>P(x+Math.cos(j/56*Math.PI*2)*r,y+Math.sin(j/56*Math.PI*2)*r,d)),c);}
+
+ const f=[0,12,23,32,45].map((x,i)=>x+move[i]-(i===0?strike*speedCurve(.70,.85,z):0));
+ const separate=(speedCurve(.22,.42,z)-speedCurve(.65,.79,z));
+ softShadow(k,366,338,160+95*separate,26,.32);
+ for(let i=0;i<5;i++){const [x,y]=P(20,98,f[i]);softShadow(k,x,y+25,59,16,.26*separate);}
+ if(separate>.02){k.save();k.globalAlpha=separate;k.setLineDash([5,5]);line(k,[P(-56,50,f[0]-32),P(-56,50,f[4]+45)],'#526760af',1);k.restore();}
+ const rear=f[4],mouth=rear-46;
+ // Draw an open cup: far walls, inner parts, near walls/rim, then parts already outside.
+ const A=quad(mouth,-74,-67,148,134),B=quad(rear+2,-74,-67,148,134);
+ const a=quad(mouth,-67,-60,134,120),b=quad(rear,-67,-60,134,120);
+ solid(rear,-74,-67,148,134,17,'#59736a','#85988a','#304844',8);
+ function wall(i,col){const j=(i+1)%4;roundPoly(k,[A[i],A[j],B[j],B[i]],3,col);}
+ function rim(i){const j=(i+1)%4;shape(k,[A[i],A[j],a[j],a[i]],'#a3ac94');}
+ function insideSurface(i,col){const j=(i+1)%4;shape(k,[a[i],a[j],b[j],b[i]],col);}
+ wall(0,'#78938a');wall(3,'#647e74');
+ insideSurface(0,'#47645c');insideSurface(3,'#36574f');rim(0);rim(3);
+ function part(i){
+  const f0=f[i];
+  if(i===3){solid(f0,-58,-48,113,96,10,'#c09454','#e3be77','#8d5c38');for(let n=0;n<3;n++){const y=-25+n*24;shape(k,quad(f0-1,-47,y,86,5),'#f1c98c');}}
+  if(i===2){solid(f0,-61,-53,122,106,5,'#3f796e','#91a591','#274d48');solid(f0-2,-25,-28,52,51,2,'#313e42','#546064','#202937',3);
+  for(let j=-23;j<28;j+=8){line(k,[P(j,-35,f0-3),P(j,-28,f0-3)],'#f8d08e',1.4);line(k,[P(j,23,f0-3),P(j,31,f0-3)],'#f8d08e',1.4);}
+  for(let j=0;j<4;j++)line(k,[P(-48,28+j*5,f0-1),P(54,28+j*5,f0-1)],'#bcd8a58f',1);}
+  if(i===1){solid(f0,-62,-56,124,112,7,'#e6d5b6','#f6e4be','#a29578');for(const [R,C] of [[41,'#5c736e'],[34,'#264744'],[28,'#aeb7a5'],[18,'#405857']])disc(f0-1,0,2,R,C);}
+ }
+ for(let i=3;i>=1;i--)if(f[i]>=mouth)part(i);
+ wall(1,'#45635c');wall(2,'#324f49');insideSurface(1,'#658078');insideSurface(2,'#506960');rim(1);rim(2);
+ for(let i=3;i>=1;i--)if(f[i]<mouth)part(i);
+ const front=f[0];
+ solid(front,-75,-68,150,136,11,'#b95d49','#d98e69','#803e36',9);
+ roundPoly(k,quad(front-1,-52,-48,104,40),5,'#233b37');
+ roundPoly(k,quad(front-2,-46,-42,92,28),3,'#d3ca97');
+ line(k,Array.from({length:26},(_,j)=>P(-36+j*2.8,-28+Math.sin(j*.87)*4,front-3)),'#567365',1.5);
+ for(const [R,C] of [[25,'#8d493b'],[21,'#e8c884'],[16,'#f5dc9e'],[5,'#76624e']])disc(front-1,14,34,R,C);
+ for(let j=0;j<4;j++)line(k,[P(-49,23+j*5,front-2),P(-25,23+j*5,front-2)],'#f0ad807c',1.3);
+ const guides=speedCurve(.38,.53,z)-speedCurve(.61,.72,z);
+ if(guides>.02){k.save();k.globalAlpha=guides;const names=['面板','扬声组件','电路板','电池','后壳'];
+   [101,230,360,490,614].forEach((x,i)=>{const A=P(0,-68,f[i]),y=49;line(k,[A,[x,y+12]],'#5b706777',1);dot(k,...A,2,'#537063');k.textAlign='center';word(k,names[i],x,y,15,'#304941',700);});k.restore();}
+};
+
+const paperSheets=(()=>{
+ const p=document.createElement('canvas');p.width=720;p.height=400;const c=p.getContext('2d');
+ c.fillStyle=grad(c,0,0,720,400,[[0,'#f0dcc0'],[.65,'#debc98'],[1,'#c69779']]);c.fillRect(0,0,720,400);
+ c.strokeStyle='#744b4564';c.strokeRect(26,25,668,349);
+ c.save();c.translate(430,178);c.rotate(-.45);
+ for(let i=0;i<16;i++){c.strokeStyle=i===2?'#a85443':'#784c4588';c.lineWidth=i===2?2.5:1;
+ c.beginPath();c.ellipse(0,0,28+i*12,14+i*8,0,0,Math.PI*2);c.stroke();}
+ c.restore();
+ c.fillStyle='#a55345';c.fillRect(49,91,7,196);word(c,'纸的剖面',96,248,59,'#633b39',750);
+ line(c,[[97,269],[310,269]],'#9a5a4b',1.4);word(c,'01 / 材质试验',97,289,14,'#6f4540',650);
+ return p;
+})();
+function paperTriangle(k,img,src,dst){
+ const [a,b,c]=src,[A,B,C]=dst, ux=b[0]-a[0],uy=b[1]-a[1],vx=c[0]-a[0],vy=c[1]-a[1],d=ux*vy-vx*uy;
+ if(Math.abs(d)<.001)return;
+ const U=[B[0]-A[0],B[1]-A[1]],V=[C[0]-A[0],C[1]-A[1]];
+ const m=(U[0]*vy-V[0]*uy)/d,n=(U[1]*vy-V[1]*uy)/d,p=(V[0]*ux-U[0]*vx)/d,q=(V[1]*ux-U[1]*vx)/d;
+ if(dst.every(([x])=>x< -2)||dst.every(([x])=>x>722)||dst.every(([,y])=>y< -2)||dst.every(([,y])=>y>402))return;
+ const orientation=Math.sign(U[0]*V[1]-U[1]*V[0]);
+ if(!orientation)return;
+ const normals=dst.map(([x,y],i)=>{const [X,Y]=dst[(i+1)%3],r=Math.max(.001,Math.hypot(X-x,Y-y));return [orientation*(Y-y)/r,-orientation*(X-x)/r];});
+ k.save();k.beginPath();
+ dst.forEach(([x,y],i)=>{
+   const A=normals[(i+2)%3],B=normals[i],dot=A[0]*B[0]+A[1]*B[1];
+   const f=.85/Math.max(.03,1+dot),dx=(A[0]+B[0])*f,dy=(A[1]+B[1])*f;
+   i?k.lineTo(x+dx,y+dy):k.moveTo(x+dx,y+dy);
+ });
+ k.closePath();k.clip();k.transform(m,n,p,q,A[0]-m*a[0]-p*a[1],A[1]-n*a[0]-q*a[1]);k.drawImage(img,0,0);k.restore();
+}
+function paperProjection(x,y,side,pivot,r,outside){
+ // The whole panel moves; the small cosine change is optical foreshortening,
+ // not compression of the print against a pinned outside edge.
+ const yaw=.31*r+.30*outside, c=Math.cos(yaw), span=(x-pivot);
+ return [pivot+span*c+side*(82*r+620*outside), y-16*r-11*side*span*Math.sin(yaw)/180+outside*44];
+}
+function paperTearState(t,h=400){
+ const z=t/4.5, outside=speedCurve(.57,.89,z);
+ return {tip:h*speedCurve(.1,.57,z),outside,strain:speedCurve(.13,.51,z)};
+}
+feature.s06=(k,w,h,t)=>{
+ const {tip,outside,strain}=paperTearState(t,h);
+ k.fillStyle=grad(k,0,0,w,h,[[0,'#193345'],[.61,'#22464c'],[1,'#477777']]);k.fillRect(0,0,w,h);
+ k.save();k.translate(427,188);k.rotate(-.4);
+ for(let i=0;i<16;i++){k.strokeStyle=i===2?'#ffe3a1':'#dac18f90';k.lineWidth=i===2?2.6:1;k.beginPath();k.ellipse(0,0,28+i*12,14+i*8,0,0,Math.PI*2);k.stroke();}
+ oval(k,0,0,10,8,'#f3cfa3');k.restore();
+ line(k,[[50,77],[50,338],[169,338]],'#dab48273',1);word(k,'回声',71,317,62,'#edd6aa',750);
+ if(tip<.1){k.drawImage(paperSheets,0,0);return;}
+ if(outside>=.999)return;
+ const seam=y=>360+Math.sin(y*.084)*4.7+Math.sin(y*.151)*2.5+(noise(Math.round(y*2.1))-.5)*4.5;
+ const rows=Array.from({length:Math.ceil(h/13)},(_,i)=>i*13).concat(tip,h).sort((a,b)=>a-b).filter((y,i,ys)=>i===0||y-ys[i-1]>.03);
+ const samples=[0,1];
+ function lift(y){return strain*speedCurve(0,112,tip-y);}
+ function map(x,y,side){
+   const r=lift(y);
+   return paperProjection(x,y,side,side<0?w*.25:w*.75,r,outside);
+ }
+ const broken=rows.filter(y=>y<tip).concat(tip);
+ const edges=[-1,1].map(side=>broken.map(y=>map(seam(y),y,side)));
+ k.save();k.lineCap='round';k.lineJoin='round';
+ for(const e of edges){
+   const shifted=e.map(([x,y],i)=>[x+9*lift(broken[i]),y+15*lift(broken[i])]);
+   // Three soft bands under the lifted edge, without a per-frame blur pass.
+   for(const [width,alpha] of [[29,.055],[17,.11],[8,.19]]){
+     k.globalAlpha=strain*alpha;line(k,shifted,'#101c24',width);
+   }
+ }
+ k.restore();
+ for(const side of [-1,1]){
+   const XY=(y,v)=>[mix(seam(y),side<0?0:w,v),y];
+   const inner=rows.map(y=>map(...XY(y,0),side)),outer=rows.map(y=>map(...XY(y,1),side));
+   k.save();k.beginPath();
+   [...inner,...outer.reverse()].forEach(([x,y],i)=>i?k.lineTo(x,y):k.moveTo(x,y));k.closePath();k.clip();
+   for(let r=1;r<rows.length;r++){
+     const a=rows[r-1],b=rows[r];if(a>=tip&&outside===0)continue;
+     for(let i=1;i<samples.length;i++){
+       const u=samples[i-1],v=samples[i],Q=[XY(a,u),XY(a,v),XY(b,v),XY(b,u)],D=Q.map(([x,y])=>map(x,y,side));
+       for(const idx of [[0,1,2],[0,2,3]])paperTriangle(k,paperSheets,idx.map(j=>Q[j]),idx.map(j=>D[j]));
+     }
+   }
+   k.restore();
+ }
+ if(tip<h)k.drawImage(paperSheets,0,tip,w,h-tip,0,tip,w,h-tip);
+ for(const [i,side] of [[0,-1],[1,1]]){
+  const e=edges[i];const lip=broken.map(y=>map(seam(y)+side*(3+10*lift(y))*lift(y),y,side));
+  k.save();k.globalAlpha=Math.min(1,strain*2.5);shape(k,[...e,...lip.reverse()],'#ebc49cb2');k.lineJoin='round';line(k,e,'#fff0d3a8',1.15);
+  for(let j=4;j<e.length-1;j+=2){const [x,y]=e[j],r=lift(broken[j]);if(r>.06)line(k,[[x,y],[x-side*(1+noise(j)*4)*r,y+(noise(j+21)-.5)*3]],'#ffedcf9e',.68);}
+  k.restore();
+ }
+};
+feature.s04=(k,w,h,t)=>{
+ const z=t/2.9, p=speedCurve(.03,.275,z)-speedCurve(.82,.995,z);
+ const u=clamp((z-.385)/.245), b=5.3, a=4.60;
+ const spring=1-Math.exp(-a*u)*(Math.cos(b*u)+(a/b)*Math.sin(b*u));
+ const settled=mix(spring,1,speedCurve(.77,1,u));
+ const f=settled*(1-speedCurve(.71,.82,z));
+ k.clearRect(0,0,w,h);
+ const cx=360,cy=196-13*f,L=183,theta=Math.PI*p;
+ const pts=Array.from({length:141},(_,i)=>{
+  const s=i/70-1;if(theta<1e-6)return[cx+L*s,cy];
+  const r=L/theta,v=s*theta,Y=r*(1-Math.cos(v))-p*p*r;
+  return[cx+r*Math.sin(v)*(1-.46*f*Math.max(0,Y/65)),cy+Y+49*f*Math.abs(s)**10];
+ });
+ k.lineCap='round';k.lineJoin='round';line(k,pts,'#285548',7.4);
+};
+function dollyTraveler(k,x,y,t){
+ const breath=Math.sin(t/4.6*2*Math.PI)*.48;
+ k.save();k.translate(x,y);
+ const shirt=grad(k,-40,10,36,128,[[0,'#edb28b'],[.55,'#ba6958'],[1,'#693f49']]);
+ const skin=grad(k,-18,-23,18,0,[[0,'#f5c3a1'],[1,'#b67969']]);
+ const trousers=grad(k,-28,88,31,157,[[0,'#526576'],[1,'#263741']]);
+ roundPoly(k,[[-29,85],[20,86],[26,122],[24,158],[7,159],[2,115],[-7,158],[-24,157],[-22,121]],5,trousers);
+ roundPoly(k,[[-24,151],[-8,152],[-8,164],[-34,165],[-34,160]],3,'#213136');
+ roundPoly(k,[[8,151],[24,151],[32,163],[10,165]],3,'#213136');
+ k.translate(0,breath);
+ k.beginPath();k.moveTo(-4,6);k.bezierCurveTo(-17,9,-31,18,-34,33);k.bezierCurveTo(-40,54,-45,78,-29,87);k.lineTo(-18,108);k.bezierCurveTo(-3,110,16,105,26,100);k.lineTo(27,72);k.bezierCurveTo(38,51,40,22,21,9);k.closePath();k.fillStyle=shirt;k.fill();
+ line(k,[[18,20],[10,42],[12,62],[16,79]],'#f6c6a368',2);
+ k.beginPath();k.moveTo(17,30);k.bezierCurveTo(39,24,47,34,48,65);k.lineTo(43,92);k.quadraticCurveTo(31,101,22,90);k.lineTo(19,48);k.closePath();k.fillStyle='#365765';k.fill();
+ line(k,[[26,55],[43,54],[44,77],[29,79]],'#b1aa8d',1.4);line(k,[[25,46],[38,37],[43,40]],'#6d8a87',1.3);
+ shape(k,[[-12,-3],[6,-2],[10,13],[-8,18],[-14,11]],'#bc8271');
+ k.beginPath();k.moveTo(-18,-15);k.bezierCurveTo(-20,-32,7,-34,17,-21);k.lineTo(20,-9);k.lineTo(26,-3);k.lineTo(20,0);k.lineTo(17,8);k.quadraticCurveTo(5,15,-5,6);k.lineTo(-15,-4);k.closePath();k.fillStyle=skin;k.fill();
+ k.beginPath();k.moveTo(-19,-13);k.bezierCurveTo(-28,-25,-16,-39,0,-39);k.quadraticCurveTo(19,-38,22,-25);k.quadraticCurveTo(29,-24,36,-21);k.quadraticCurveTo(30,-17,16,-19);k.lineTo(-4,-15);k.lineTo(-11,-2);k.closePath();k.fillStyle='#303d4d';k.fill();
+ dot(k,15,-10,1.45,'#3f3440');line(k,[[17,2],[21,1]],'#915b5c',1);dot(k,-7,-5,3.2,'#ca8b7a');
+ k.restore();
+}
+function coastScene(k,A,cam){
+ const f=cam;
+ if(A){
+   k.fillStyle=grad(k,0,0,0,400,[[0,'#2c3547'],[.75,'#8a766b'],[1,'#474559']]);k.fillRect(0,0,720,400);
+   const vec=280-f*.08;
+   shape(k,[[0,313],[vec,225],[720,303],[720,400],[0,400]],'#434457');
+   for(let i=1;i<9;i++)line(k,[[vec,225],[i*126-241,400]],'#d9b28b57',1);
+   for(let x=-120;x<880;x+=156){
+     const X=x-f*.31;
+     rr(k,X,82,130,195,3,'#a27b64');rr(k,X+7,89,115,180,3,'#333b4d');
+     rr(k,X+13,110,101,53,4,'#efc38c');shape(k,[[X+13,160],[X+44,137],[X+68,147],[X+101,132],[X+113,146],[X+113,163]],'#7b6870');
+     line(k,[[X+56,88],[X+56,270]],'#d9b18b',2);
+     line(k,[[X-9,91],[X-9,287]],'#cfa47e80',2);
+   }
+   shape(k,[[0,288],[720,288],[720,303],[0,318]],'#625461');
+   line(k,[[0,323],[720,304]],'#e9b770',4);
+   line(k,[[78-f*.23,0],[78-f*.23,38]],'#413f4b',3);rr(k,29-f*.23,37,101,27,1,'#bd916b');word(k,'站台',60-f*.23,56,15,'#262b3a',700);
+ }else{
+   k.fillStyle=grad(k,0,0,0,400,[[0,'#655c73'],[.56,'#e3a68a'],[.61,'#dfa188'],[1,'#1c5a61']]);k.fillRect(0,0,720,400);
+   dot(k,516-f*.042,146,49,'#f6c495');
+   shape(k,[[0,217],[84,162],[171,189],[246,151],[351,219],[447,202],[571,229],[720,188],[720,283],[0,289]],'#6c6978');
+   shape(k,[[0,245],[164,211],[226,226],[291,209],[518,262],[720,221],[720,294],[0,309]],'#57727b');
+   k.fillStyle=grad(k,0,250,0,400,[[0,'#487d82'],[1,'#234b58']]);k.fillRect(0,250,720,150);
+   for(let i=0;i<68;i++){const x=noise(i+351)*760-f*.08,y=252+noise(i+35)*146;line(k,[[x,y],[x+8+noise(i+70)*65,y]],i%3?'#afc3af46':'#f5c49868',1);}
+   const x=618-f*.15;
+   shape(k,[[x-7,252],[x+6,214],[x+14,214],[x+21,252]],'#eee0b4');
+   rr(k,x+3,208,13,7,2,'#a25655');dot(k,x+9,209,1.9,'#f7dd98');
+   shape(k,[[0,375],[157-f*.31,332],[264-f*.31,345],[424-f*.31,394],[720,394],[720,400],[0,400]],'#594f64');
+   line(k,[[0,346],[146-f*.31,310],[251-f*.31,323]],'#ccb498',3);
+   for(let j=0;j<4;j++){const u=18+j*55-f*.31;line(k,[[u,346-j*8],[u,372-j*7]],'#ad9b8e',2);}
+ }
+}
+
+feature.s08=(k,w,h,t)=>{
+ const z=t/4.3,cross1=speedCurve(.255,.375,z),cross2=speedCurve(.796,.916,z);
+ const second=z>.58,u=second?cross2:cross1;
+ const A=second?u>=.5:u<.5;
+ const cam=second?(A?(u-1)*356:178+u*178):(A?u*356:(u-.5)*356);
+ coastScene(k,A,cam);
+ if(u<=0||u>=1)return;
+ const W=730,x=740-(740+W+20)*u;
+ const face=(a,b,y1,y2)=>[[a,y1],[b,y1],[b,y2],[a,y2]];
+ // Vertical edges remain vertical. Only the receding face changes with viewpoint.
+ const dist=(u-.5)*2,depth=56*Math.min(1,Math.abs(dist)*2);
+ const a=x,b=x+W;
+ if(dist<0)shape(k,[[a-depth,-8],[a,-56],[a,454],[a-depth,407]],'#4c4044');
+ else shape(k,[[b,-56],[b+depth,-8],[b+depth,407],[b,454]],'#493d45');
+ const C=face(a,b,-56,454);
+ const dim=.10*Math.sin(Math.PI*u);
+ if(dim>0) {k.fillStyle='rgba(21,18,27,'+dim+')';k.fillRect(0,0,w,h);}
+ const g=grad(k,a,0,b,0,[[0,'#63545100'],[.005,'#6f5954'],[.12,'#97786b'],[.72,'#735d59'],[.995,'#49373b'],[1,'#49373b00']]);
+ shape(k,C,g);
+ k.save();k.beginPath();C.forEach(([X,Y],i)=>i?k.lineTo(X,Y):k.moveTo(X,Y));k.closePath();k.clip();
+ for(let i=1;i<4;i++)line(k,[[a,100*i],[b,100*i]],'#aa92816b',1.5);
+ for(let i=0;i<100;i++){const X=a+noise(i+59)*W,Y=noise(i+177)*h;line(k,[[X,Y],[X+9+noise(i)*14,Y]],'#b49b8029',.65);}
+ k.restore();
+};
+const skaterCut=(()=>{const figure=document.createElement('canvas'),mask=document.createElement('canvas');figure.width=mask.width=250;figure.height=mask.height=245;return {figure,mask};})();
+function drawSkater(k,px,y,rot,pop,crouch,outline){
+ const {figure,mask}=skaterCut, c=figure.getContext('2d'), m=mask.getContext('2d');
+ c.clearRect(0,0,250,245);c.save();c.translate(125,204);
+ const legs=grad(c,-34,-90,36,-12,[[0,'#859184'],[.63,'#4b6966'],[1,'#2c4549']]);
+ const coat=grad(c,-28,-130,37,-79,[[0,'#ecad7d'],[.53,'#ca7359'],[1,'#965849']]);
+ function path(fill,fn){c.beginPath();fn(c);c.closePath();c.fillStyle=fill;c.fill();}
+ c.save();c.rotate(rot);
+ // Skateboard tail makes contact first, then re-levels near the jump apex.
+ c.save();c.rotate(-.29*pop);
+ path('#5b3f32',p=>{p.moveTo(-65,-11);p.quadraticCurveTo(-53,-1,-37,-1);p.lineTo(45,-1);p.quadraticCurveTo(59,-1,68,-12);p.quadraticCurveTo(50,-7,42,-8);p.lineTo(-38,-8);p.quadraticCurveTo(-51,-8,-65,-11);});
+ line(c,[[-49,-4],[48,-4]],'#c09969',1.4);
+ for(const xx of [-44,43]){
+   rr(c,xx-6,-1,13,6,2,'#52605d');dot(c,xx,7,6.1,'#d0a863');
+   const angle=px/6.1;for(let j=0;j<3;j++){const a=angle+j*2.094;line(c,[[xx,7],[xx+Math.cos(a)*4.8,7+Math.sin(a)*4.8]],'#9e764f',.9);}
+   dot(c,xx,7,2,'#a57951');
+ }
+ c.restore();
+
+ const d=crouch, angle=-.29*pop;
+ const turn=(x,y)=>[x*Math.cos(angle)-y*Math.sin(angle), x*Math.sin(angle)+y*Math.cos(angle)];
+ const left=turn(-39,-14), right=turn(23,-14);
+ path('#344b4d',p=>{
+   p.moveTo(-4+d*.28,-87+d);p.bezierCurveTo(19+d*.35,-80+d,37+d*.22,-57+d*.36,43,-45+d*.23);
+   p.quadraticCurveTo(47,-34+d*.17,right[0]+8,right[1]+1);
+   p.lineTo(right[0]-7,right[1]+1);p.quadraticCurveTo(right[0]+1,-30+d*.26,23,-42+d*.23);
+   p.bezierCurveTo(7+d*.23,-52,-4+d*.3,-60+d,-14,-70+d);
+ });
+ path(legs,p=>{
+  p.moveTo(-25+d*.28,-84+d);p.quadraticCurveTo(-4+d*.3,-91+d,8+d*.3,-74+d);
+  p.bezierCurveTo(-3,-57+d*.7,-19-d*.26,-48+d*.38,-28-d*.33,-38+d*.26);
+  p.lineTo(left[0]+9,left[1]+2);p.lineTo(left[0]-10,left[1]+2);
+  p.quadraticCurveTo(-45,-25,-46-d*.24,-43+d*.25);p.bezierCurveTo(-46-d*.24,-49+d*.3,-37-d*.25,-61+d*.37,-32+d*.2,-65+d);
+ });
+ c.save();c.rotate(angle);
+ // The shoe sole is on the deck in deck-local coordinates in every frame.
+ for(const [x,col] of [[-42,'#dcbd91'],[20,'#e0c5a1']]){
+   path(col,p=>{p.moveTo(x-9,-17);p.lineTo(x+6,-17);p.quadraticCurveTo(x+11,-14,x+17,-12);p.lineTo(x+16,-8);p.lineTo(x-12,-8);p.quadraticCurveTo(x-14,-10,x-9,-17);});
+   line(c,[[x-11,-8.7],[x+16,-8.7]],'#533e35',1.1);line(c,[[x+1,-14],[x+7,-13]],'#fff0c3',1.1);
+ }
+ c.restore();
+ c.translate(d*.41,d);
+ // Rear arm, torso and sleeve are curved filled forms, not thick sticks.
+ path('#b7816b',p=>{p.moveTo(-14,-107);p.quadraticCurveTo(-34,-101,-43,-85);p.lineTo(-62,-89);p.quadraticCurveTo(-72,-102,-77,-95);p.quadraticCurveTo(-77,-88,-70,-83);p.lineTo(-45,-74);p.quadraticCurveTo(-33,-76,-23,-91);});
+ path(coat,p=>{p.moveTo(-25,-99);p.quadraticCurveTo(-15,-123,4,-127);p.quadraticCurveTo(21,-128,35,-107);p.lineTo(44,-94);p.quadraticCurveTo(42,-87,32,-85);p.lineTo(19,-96);p.quadraticCurveTo(12,-80,8,-74);p.quadraticCurveTo(-16,-72,-29,-82);p.closePath();});
+ line(c,[[-23,-81],[-3,-81],[12,-84]],'#f4b28a9e',1.8);
+ path('#d8a387',p=>{p.moveTo(36,-97);p.lineTo(46,-93);p.quadraticCurveTo(55,-89,70,-102);p.quadraticCurveTo(75,-104,81,-99);p.lineTo(72,-94);p.quadraticCurveTo(57,-75,43,-80);p.lineTo(35,-86);});
+ path('#c18e7b',p=>{p.moveTo(-1,-129);p.lineTo(5,-143);p.lineTo(19,-140);p.lineTo(19,-122);p.quadraticCurveTo(8,-115,-1,-129);});
+ path('#e1aa8d',p=>{p.moveTo(-1,-149);p.quadraticCurveTo(-2,-167,15,-170);p.quadraticCurveTo(29,-165,29,-150);p.lineTo(35,-146);p.lineTo(29,-142);p.quadraticCurveTo(28,-132,19,-134);p.quadraticCurveTo(5,-135,-1,-149);});
+ path('#353e4f',p=>{p.moveTo(-3,-148);p.quadraticCurveTo(-13,-163,-3,-169);p.quadraticCurveTo(14,-181,28,-167);p.lineTo(33,-162);p.quadraticCurveTo(44,-162,44,-158);p.lineTo(20,-156);p.quadraticCurveTo(7,-151,4,-144);});
+ dot(c,26,-149,1.15,'#4c4445');
+ c.restore();c.restore();
+ k.save();k.translate(px-125,y-204);
+ if(outline){m.clearRect(0,0,250,245);m.drawImage(figure,0,0);m.globalCompositeOperation='source-in';m.fillStyle='#f5eacb';m.fillRect(0,0,250,245);m.globalCompositeOperation='source-over';for(let j=0;j<16;j++){const a=j/16*Math.PI*2;k.drawImage(mask,(3.7*outline)*Math.cos(a),(3.7*outline)*Math.sin(a));}}
+ k.drawImage(figure,0,0);k.restore();
+}
+
+feature.s03=(k,w,h,t)=>{
+ const q=t/4.6,a=speedCurve(.12,.50,q)-speedCurve(.63,.98,q),D=mix(10.1,2.58,a),F=106*D;
+ const ox=360,oy=160,P=(x,y,z)=>[ox+x*F/(z+D),oy+y*F/(z+D)];
+ k.fillStyle='#282a3b';k.fillRect(0,0,w,h);
+ const wall=(X,Y,Z,XX,YY,ZZ,c)=>shape(k,[P(X,Y,Z),P(XX,Y,Z),P(XX,YY,ZZ),P(X,YY,ZZ)],c);
+ const fade=(z,n=0)=>`hsl(${n?246:233} ${n?24:20}% ${26+z*.67}%)`;
+ const zmax=22;
+ shape(k,[P(-4,1.55,-2),P(4,1.55,-2),P(4,1.55,zmax),P(-4,1.55,zmax)],'#413d50');
+ shape(k,[P(-4,-2.65,-2),P(4,-2.65,-2),P(4,-2.65,zmax),P(-4,-2.65,zmax)],'#333143');
+ wall(-4,-2.65,zmax,4,1.55,zmax,'#c78d69');
+ for(const side of [-1,1]){
+  shape(k,[P(side*4,-2.65,-2),P(side*4,-2.65,zmax),P(side*4,1.55,zmax),P(side*4,1.55,-2)],'#3f435a');
+  for(let z=20;z>=-1;z-=3){
+   const X=side*3.98;
+   shape(k,[P(X,-1.99,z),P(X,-1.99,z+1.8),P(X,.77,z+1.8),P(X,.77,z)],fade(z,1));
+   line(k,[P(X,-1.99,z),P(X,.77,z)],'#bf957c',1.45);
+   line(k,[P(X,-1.56,z),P(X,-1.56,z+1.72)],'#d6a38c',1.3);
+  }
+ }
+ for(let x=-4;x<=4;x+=.7)line(k,[P(x,1.55,-2),P(x,1.55,zmax)],'#d4a68956',1);
+ for(let z=21;z>=-1;z-=2){
+  line(k,[P(-4,1.55,z),P(4,1.55,z)],'#cbad9066',1);
+  if(z%4===1){const A=P(-3.96,-2.55,z),B=P(3.96,-2.55,z);line(k,[A,B],'#e4af86',2.2);for(const side of [-1,1]){const H=P(side*3.92,-2.55,z);line(k,[H,P(side*3.92,1.55,z)],'#e4af868c',2);}}
+ }
+ const glow=k.createRadialGradient(360,170,6,360,170,240);glow.addColorStop(0,'#ffcd8f34');glow.addColorStop(1,'#1d243400');k.fillStyle=glow;k.fillRect(0,0,w,h);
+ // The traveler lives on the focal plane z=0: the d factor cancels exactly.
+ const [cx,cy]=P(0,0,0);
+ // Ground-plane shadow points use the same perspective as the floor.
+ const ground=P(0,1.55,0), far=P(.15,1.55,1.50);
+ softShadow(k,ground[0],ground[1]+2,43,8.5,.61);
+ softShadow(k,ground[0],(ground[1]+far[1])/2,34,Math.abs(ground[1]-far[1])*.53+3,.26);
+ dollyTraveler(k,cx,cy,t);
+ const vignette=k.createRadialGradient(360,195,115,360,195,421);vignette.addColorStop(0,'#171a2700');vignette.addColorStop(1,'#171a2780');k.fillStyle=vignette;k.fillRect(0,0,w,h);
+};
+feature.s09=(k,w,h,t)=>{
+ const z=t/5.4, hit=.331, release=.81;
+ const rise=speedCurve(.19,hit,z),fall=speedCurve(release,.942,z), jump=rise-fall;
+ const push=speedCurve(.10,.184,z)-speedCurve(.19,.257,z), landing=speedCurve(.89,.95,z)-speedCurve(.95,.997,z); const pop=speedCurve(.158,.205,z)-speedCurve(.205,.30,z);
+ const crawl=flow(0,hit,z), glide=flow(release,1,z);
+ const px=-95+460*crawl+470*glide, dy=-104*jump, rot=-.09*jump+.045*push, crouch=push*24+landing*17;
+ const enters=flow(hit,hit+.10,z), exits=flow(.785,.895,z), framing=enters*(1-exits);
+ k.fillStyle='#c7d2bf';k.fillRect(0,0,w,h);
+ for(let i=0;i<17;i++){let x=i*56,hi=56+noise(i+83)*72;k.fillStyle=i%2?'#a4b3a0':'#b1bcaa';k.fillRect(x,279-hi,41,hi);}
+ shape(k,[[0,280],[720,280],[720,400],[0,400]],'#6d827e');line(k,[[0,302],[720,302]],'#a7b6a4',3);line(k,[[0,342],[720,342]],'#e7d5a7',1);
+ k.save();k.translate(px,323);k.scale(1,.18);dot(k,0,0,Math.max(13,54+dy*.22),'#29484259');k.restore();
+ 
+ function panelClip(){
+   const right=(w+65)*enters-38,left=(w+65)*exits-38;
+   k.beginPath();k.moveTo(left+28,0);k.lineTo(right+28,0);k.lineTo(right-4,h);k.lineTo(left-4,h);k.closePath();k.clip();
+ }
+ if(framing>0){
+  k.save();panelClip();
+  k.fillStyle='#eed9a7';k.fillRect(0,0,w,h);
+  // Distinct hard beats: printed field, paper strips, hand-drawn arrow.
+  k.fillStyle='#163d35';k.fillRect(32,25,655,350);
+  const field=flow(hit,hit+.12,z);
+  k.save();k.translate((1-field)*-730,0);
+  shape(k,[[38,57],[633,27],[678,278],[399,343],[100,373]],'#e8a94e');
+  shape(k,[[41,235],[672,129],[684,325],[422,373],[63,357]],'#d35e46');
+  for(let yy=43;yy<354;yy+=8)for(let x=47;x<672;x+=8)if((x-503)**2+(yy-171)**2<172**2)dot(k,x,yy,1+2*noise(x*.6+yy),'#4b302e7e');
+  word(k,'腾空',74,202,119,'#fae7b3',900);
+  k.restore();
+  const p1=flow(.43,.56,z),p2=flow(.49,.63,z);
+  if(p1>0)newspaper(k,43-(1-p1)*257,279+(1-p1)*39,234,62,-.086-(1-p1)*.29,'动作记录 / 09');
+  if(p2>0)newspaper(k,506+(1-p2)*240,68-(1-p2)*93,162,65,.15+(1-p2)*.38,'停在最高点');
+  k.restore();
+ }
+ function rider(outline){drawSkater(k,px,302+dy,rot,pop,crouch,outline);}
+ if(framing>0){k.save();panelClip();rider(1);k.restore();}
+ rider(0);
+ if(framing>0){k.save();panelClip();
+  const q=flow(.59,.745,z);
+  if(q>0){
+   const a=[[624,217],[588,207],[553,211],[511,228],[479,237],[446,247]],j=q*(a.length-1),n=Math.floor(j);
+   k.lineCap='round';k.lineJoin='round';const b=a[Math.min(n+1,a.length-1)];
+   line(k,[...a.slice(0,n+1),[mix(a[n][0],b[0],j-n),mix(a[n][1],b[1],j-n)]],'#fcebc1',4);
+   const arrow=flow(.76,1,q);if(arrow>0)line(k,[[mix(442,459,arrow),mix(248,224,arrow)],[442,248],[mix(442,474,arrow),mix(248,252,arrow)]],'#fcebc1',4);
+   for(let i=0;i<4;i++){const ox=407+i*10;line(k,[[ox,134-i*2],[ox+6,119-i*5]],'#f5dfac',2);}
+  }
+  k.restore();
+ }
+
+};
+const $ = s => document.querySelector(s);
+const cards = JSON.parse($('#cards').textContent);
+const key='motion-atlas:favorites:v1';
+let starred=new Set();
+try { const saved=JSON.parse(localStorage.getItem(key)||'[]'); if(Array.isArray(saved)) starred=new Set(saved); } catch {}
+let shelf='studies', group='全部', onlyStar=false, active=null, raf=0, last=0, noteTimer;
+const normalize=s=>s.normalize('NFKC').toLowerCase().replace(/[\p{P}\p{Z}\s]+/gu,'');
+function match(c, query) {
+  const terms=[c.name,c.en,c.id,c.group,c.desc,c.prompt,...c.tags].map(normalize);
+  const n=normalize(query);
+  if(!n||terms.some(t=>t.includes(n))) return true;
+  const words=query.trim().toLowerCase().split(/\s+/).map(normalize).filter(Boolean);
+  if(words.length>1&&words.every(w=>terms.some(t=>t.includes(w)))) return true;
+  // Prefer close phrasing in the curated Chinese intention tags, without a network model.
+  if(!/^\p{Script=Han}{5,}$/u.test(n)) return false;
+  const grams=[...new Set(Array.from({length:n.length-1},(_,i)=>n.slice(i,i+2)))];
+  const found=grams.filter(g=>c.tags.some(t=>normalize(t).includes(g))).length;
+  return found>=2&&found/grams.length>=0.34;
+}
+function node(tag,cls='',content='') {
+  const el=document.createElement(tag); if(cls)el.className=cls; if(content)el.textContent=content; return el;
+}
+function notify(message) {
+  const toast=$('#toast'); toast.textContent=message; toast.hidden=false; clearTimeout(noteTimer);
+  noteTimer=setTimeout(()=>toast.hidden=true,1900);
+}
+async function clipboard(message) {
+  try { await navigator.clipboard.writeText(message); return true; } catch {}
+  const box=node('textarea'); box.value=message; box.style.cssText='position:fixed;left:-1000px;top:0'; document.body.append(box);
+  const focus=document.activeElement; box.select(); let ok=false;
+  try { ok=document.execCommand('copy'); } catch {}
+  box.remove(); focus?.focus(); return ok;
+}
+const shelfFor=c=>c.study?'studies':c.slug?'featured':'base';
+const custom=c=>c.study||c.slug;
+const views=cards.map(c=>{
+  const article=node('article','card'); article.dataset.id=c.id;
+  const stage=node('div','stage'), canvas=node('canvas'), meter=node('div','meter');
+  [canvas.width,canvas.height]=c.dims||[539,208]; if(custom(c))article.classList.add('featured'); if(c.study)article.classList.add('study');canvas.setAttribute('role','img');canvas.setAttribute('aria-label',c.name+'效果画面');
+  if(!custom(c))article.classList.add('base');
+  const preview=node('button','preview','▶ 播放');preview.type='button';preview.setAttribute('aria-label',c.name+'：播放预览');
+  stage.append(canvas,meter,preview);
+  const meta=node('div','meta'), index=node('span','index','#'+c.id), label=node('span','',c.group);
+  if(custom(c)){index.textContent='#'+c.id.slice(1);label.className='featuretag';label.textContent=c.category;}else{label.className='featuretag';label.textContent='原理白模';}
+  const fav=node('button','fav'); fav.type='button';
+  function paintStar(){const s=starred.has(c.id);fav.textContent=s?'★':'☆';fav.setAttribute('aria-pressed',s);fav.setAttribute('aria-label',(s?'取消收藏':'收藏')+c.name);}
+  paintStar();
+  fav.onclick=()=>{if(starred.has(c.id))starred.delete(c.id);else starred.add(c.id);try{localStorage.setItem(key,JSON.stringify([...starred]));}catch{}paintStar();render();};
+  meta.append(index,label,fav);
+  const body=node('div','body'); body.append(node('h2','',c.name),node('p','en',c.en),node('p','description',c.desc));
+  if(c.note)body.append(node('div','credit',c.note));else body.append(node('div','source-note','保留原版画面，供辨认动作原理。'));
+  const links=node('div','links'), copy=node('button','','复制通用模板'), source=node('a','','看原版 ↗');
+  if(c.study){source.removeAttribute('href');source.textContent='原创演示';}else if(c.slug){source.href='https://atlas.letz.ai/effect/'+c.slug;source.textContent='Atlas 原文 ↗';}else source.href='https://showheyohtaki.github.io/motion-prompt/#'+c.id; source.target='_blank';source.rel='noopener noreferrer';
+  copy.onclick=async()=>{if(await clipboard(c.prompt)){copy.textContent='已复制';setTimeout(()=>copy.textContent='复制通用模板',1250);notify('已复制模板，替换方括号中的内容即可');}else window.prompt('浏览器没有开放剪贴板，请手动复制：',c.prompt);};
+  links.append(copy,source);
+  const v={c,article,stage,canvas,meter,ctx:canvas.getContext('2d'),time:0,preview,beatButtons:[]};
+  const template=node('details','template');template.append(node('summary','','查看通用模板'),node('p','',c.prompt));
+  article.append(stage,meta,body,template);
+  preview.onclick=()=>active===v?stop(v):play(v);
+  if(c.beats){
+    const strip=node('div','beats');
+    for(const [name,at] of c.beats){
+      const b=node('button','',name);
+      b.setAttribute('aria-label',c.name+'：'+name);b.setAttribute('aria-pressed','false');
+      b.onclick=()=>{if(active)stop(active);for(const it of views)clearBeats(it);v.time=at*c.seconds;draw(v,v.time);b.setAttribute('aria-pressed','true');};
+      v.beatButtons.push(b);strip.append(b);
+    }
+    article.append(strip);
+  }
+  article.append(links);$('.grid').append(article);
+  return v;
+});
+const watcher=new IntersectionObserver(entries=>{for(const e of entries){if(active?.stage===e.target&&!e.isIntersecting)stop(active);}},{threshold:0});
+function draw(v, time) {
+  const {ctx,canvas,c,meter}=v,w=canvas.width,h=canvas.height;
+  ctx.save();try {ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,w,h);(custom(c)?feature[c.id]:demos[c.pack][c.index])(ctx,w,h,time);}finally{ctx.restore();}
+  meter.style.transform='scaleX('+Math.min(1,time/playDuration(v))+')';
+}
+views.forEach(v=>{v.time=v.c.poster*v.c.seconds;draw(v,v.time);watcher.observe(v.stage);});
+function setPlayLabel(v,text,label){
+ v.preview.textContent=text;v.preview.setAttribute('aria-label',v.c.name+'：'+label);
+}
+function playDuration(v){return v.c.seconds*(v.c.playUntil??1);}
+function stop(v,finished=false){
+ if(active!==v)return;
+ active=null;cancelAnimationFrame(raf);raf=0;v.stage.classList.remove('is-playing');
+ if(finished&&v.c.id==='005'){v.time=v.c.poster*v.c.seconds;draw(v,v.time);}
+ setPlayLabel(v,finished?'↻ 重播':'▶ 播放','播放预览');
+}
+function play(v){
+ if(active)stop(active);
+ active=v;v.stage.classList.add('is-playing');clearBeats(v);v.time=0;last=performance.now();draw(v,0);
+ setPlayLabel(v,'■ 停止','停止预览');raf=requestAnimationFrame(frame);
+}
+function frame(now){
+ const v=active;if(!v)return;
+ if(document.hidden||v.article.hidden){stop(v);return;}
+ const end=playDuration(v);
+ v.time=Math.min(end,v.time+Math.min(.06,(now-last)/1000)*(v.c.rate??1));last=now;draw(v,v.time>=end&&!custom(v.c)?end-1/60:v.time);
+ if(v.time>=end)stop(v,true);else raf=requestAnimationFrame(frame);
+}
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&active)stop(active);});
+const filters=['全部',...new Set(cards.map(c=>c.group))].map(g=>{const el=node('button','',g);el.onclick=()=>{group=g;render();};$('.filters').append(el);return [g,el];});
+function render(){
+  let n=0;
+  for(const v of views){const inShelf=shelf==='all'||onlyStar||$('#q').value.trim()!==''||shelfFor(v.c)===shelf;v.article.hidden=!(inShelf&&match(v.c,$('#q').value)&&(group==='全部'||v.c.group===group)&&(!onlyStar||starred.has(v.c.id)));if(!v.article.hidden)n++;}
+  if(active?.article.hidden)stop(active);
+  for(const [g,e] of filters){e.setAttribute('aria-pressed',g===group);e.hidden=g!=='全部'&&!cards.some(c=>c.group===g&&(shelf==='all'||onlyStar||$('#q').value.trim()!==''||shelfFor(c)===shelf));}
+  for(const e of document.querySelectorAll('[data-shelf]')) e.setAttribute('aria-pressed',e.dataset.shelf===shelf&&!onlyStar&&!$('#q').value.trim());
+  $('#rail-note').textContent=$('#q').value.trim()?'正在搜索全部参考':onlyStar?'浏览器本地收藏':shelf==='studies'?'点播看动作，点关键帧看细节':shelf==='featured'?'VFX Atlas 手法 · 原创动态示意':shelf==='base'?'Motion Prompt 原理白模 · 点播一轮':'代表帧总览 · 每次只播放一张';
+  $('#favorites').setAttribute('aria-pressed',onlyStar);
+  $('#count').textContent=String(n).padStart(2,'0')+' / '+String(cards.length).padStart(2,'0')+' 张参考';
+  $('.empty').hidden=n>0;
+}
+function clearBeats(v){for(const b of v.beatButtons)b.setAttribute('aria-pressed','false');}
+$('#favorites').onclick=()=>{onlyStar=!onlyStar;render();};
+$('#q').addEventListener('input',()=>{group='全部';render();});
+for(const e of document.querySelectorAll('[data-shelf]'))e.onclick=()=>{shelf=e.dataset.shelf;group='全部';onlyStar=false;$('#q').value='';render();};
+$('#reset').onclick=()=>{$('#q').value='';onlyStar=false;group='全部';render();$('#q').focus();};
+render();
+
+</script><script type="text/plain" id="bundled-licenses">
+Fonts are (c) Bitstream (see below). DejaVu changes are in public domain.
+Glyphs imported from Arev fonts are (c) Tavmjong Bah (see below)
+
+
+Bitstream Vera Fonts Copyright
+------------------------------
+
+Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is
+a trademark of Bitstream, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the fonts accompanying this license ("Fonts") and associated
+documentation files (the "Font Software"), to reproduce and distribute the
+Font Software, including without limitation the rights to use, copy, merge,
+publish, distribute, and/or sell copies of the Font Software, and to permit
+persons to whom the Font Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright and trademark notices and this permission notice shall
+be included in all copies of one or more of the Font Software typefaces.
+
+The Font Software may be modified, altered, or added to, and in particular
+the designs of glyphs or characters in the Fonts may be modified and
+additional glyphs or characters may be added to the Fonts, only if the fonts
+are renamed to names not containing either the words "Bitstream" or the word
+"Vera".
+
+This License becomes null and void to the extent applicable to Fonts or Font
+Software that has been modified and is distributed under the "Bitstream
+Vera" names.
+
+The Font Software may be sold as part of a larger software package but no
+copy of one or more of the Font Software typefaces may be sold by itself.
+
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT,
+TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME
+FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING
+ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE
+FONT SOFTWARE.
+
+Except as contained in this notice, the names of Gnome, the Gnome
+Foundation, and Bitstream Inc., shall not be used in advertising or
+otherwise to promote the sale, use or other dealings in this Font Software
+without prior written authorization from the Gnome Foundation or Bitstream
+Inc., respectively. For further information, contact: fonts at gnome dot
+org.
+
+Arev Fonts Copyright
+------------------------------
+
+Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the fonts accompanying this license ("Fonts") and
+associated documentation files (the "Font Software"), to reproduce
+and distribute the modifications to the Bitstream Vera Font Software,
+including without limitation the rights to use, copy, merge, publish,
+distribute, and/or sell copies of the Font Software, and to permit
+persons to whom the Font Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright and trademark notices and this permission notice
+shall be included in all copies of one or more of the Font Software
+typefaces.
+
+The Font Software may be modified, altered, or added to, and in
+particular the designs of glyphs or characters in the Fonts may be
+modified and additional glyphs or characters may be added to the
+Fonts, only if the fonts are renamed to names not containing either
+the words "Tavmjong Bah" or the word "Arev".
+
+This License becomes null and void to the extent applicable to Fonts
+or Font Software that has been modified and is distributed under the 
+"Tavmjong Bah Arev" names.
+
+The Font Software may be sold as part of a larger software package but
+no copy of one or more of the Font Software typefaces may be sold by
+itself.
+
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL
+TAVMJONG BAH BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+Except as contained in this notice, the name of Tavmjong Bah shall not
+be used in advertising or otherwise to promote the sale, use or other
+dealings in this Font Software without prior written authorization
+from Tavmjong Bah. For further information, contact: tavmjong @ free
+. fr.
+
+TeX Gyre DJV Math
+-----------------
+Fonts are (c) Bitstream (see below). DejaVu changes are in public domain.
+
+Math extensions done by B. Jackowski, P. Strzelczyk and P. Pianowski
+(on behalf of TeX users groups) are in public domain.
+
+Letters imported from Euler Fraktur from AMSfonts are (c) American
+Mathematical Society (see below).
+Bitstream Vera Fonts Copyright
+Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera
+is a trademark of Bitstream, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the fonts accompanying this license (“Fonts”) and associated
+documentation
+files (the “Font Software”), to reproduce and distribute the Font Software,
+including without limitation the rights to use, copy, merge, publish,
+distribute,
+and/or sell copies of the Font Software, and to permit persons  to whom
+the Font Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright and trademark notices and this permission notice
+shall be
+included in all copies of one or more of the Font Software typefaces.
+
+The Font Software may be modified, altered, or added to, and in particular
+the designs of glyphs or characters in the Fonts may be modified and
+additional
+glyphs or characters may be added to the Fonts, only if the fonts are
+renamed
+to names not containing either the words “Bitstream” or the word “Vera”.
+
+This License becomes null and void to the extent applicable to Fonts or
+Font Software
+that has been modified and is distributed under the “Bitstream Vera”
+names.
+
+The Font Software may be sold as part of a larger software package but
+no copy
+of one or more of the Font Software typefaces may be sold by itself.
+
+THE FONT SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT,
+TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL BITSTREAM OR THE GNOME
+FOUNDATION
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL,
+SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN
+ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR
+INABILITY TO USE
+THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+Except as contained in this notice, the names of GNOME, the GNOME
+Foundation,
+and Bitstream Inc., shall not be used in advertising or otherwise to promote
+the sale, use or other dealings in this Font Software without prior written
+authorization from the GNOME Foundation or Bitstream Inc., respectively.
+For further information, contact: fonts at gnome dot org.
+
+AMSFonts (v. 2.2) copyright
+
+The PostScript Type 1 implementation of the AMSFonts produced by and
+previously distributed by Blue Sky Research and Y&Y, Inc. are now freely
+available for general use. This has been accomplished through the
+cooperation
+of a consortium of scientific publishers with Blue Sky Research and Y&Y.
+Members of this consortium include:
+
+Elsevier Science IBM Corporation Society for Industrial and Applied
+Mathematics (SIAM) Springer-Verlag American Mathematical Society (AMS)
+
+In order to assure the authenticity of these fonts, copyright will be
+held by
+the American Mathematical Society. This is not meant to restrict in any way
+the legitimate use of the fonts, such as (but not limited to) electronic
+distribution of documents containing these fonts, inclusion of these fonts
+into other public domain or commercial font collections or computer
+applications, use of the outline data to create derivative fonts and/or
+faces, etc. However, the AMS does require that the AMS copyright notice be
+removed from any derivative versions of the fonts which have been altered in
+any way. In addition, to ensure the fidelity of TeX documents using Computer
+Modern fonts, Professor Donald Knuth, creator of the Computer Modern faces,
+has requested that any alterations which yield different font metrics be
+given a different name.
+
+$Id$
+
+
+MIT License
+
+Copyright (c) 2026 Shohei Ohtaki
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+</script></body></html>
