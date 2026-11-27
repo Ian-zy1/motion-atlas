@@ -1,0 +1,1 @@
+【透明导片协议】输出单文件 HTML + Canvas 2D，默认全透明底，每帧先 clearRect，只绘制效果；不铺全屏底色或底图，不依赖外网。提供 window.renderAt(t)，t 为秒数，同一 t 可确定性重绘。

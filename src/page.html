@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>视觉参考图鉴 · 怪想实验室</title>
+<style>{{gallery.css}}</style></head>
+<body><div class="top"><strong><span class="dot" aria-hidden="true">✦</span> 怪想实验室</strong><span class="edition">MOTION ATLAS / 16.0</span></div>
+<main><header><div><p class="micro">FIELD NOTES / 动效参考</p><h1>视觉参考图鉴</h1><p>按用途找动效。先看代表帧，点播理解原理，再复制模板换成自己的场景。</p></div><div class="counter" aria-label="共{{count.all}}条参考"><b>{{count.all}}</b> 动效参考</div></header>
+<div class="shelves" aria-label="切换图鉴分区"><button data-shelf="studies">动作实验 · {{count.studies}}</button><button data-shelf="featured">进阶精选 · {{count.featured}}</button><button data-shelf="base">基础白模 · {{count.base}}</button><button data-shelf="all">全部 · {{count.all}}</button></div><div class="controls"><label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" aria-label="搜动效" placeholder="试试：把注意力从前面移到后面" autocomplete="off"></label><div class="filters" aria-label="按用途筛选"></div><div class="actions"><button id="favorites" aria-pressed="false">☆ 只看收藏</button></div></div>
+<div class="copy-options"><label for="transparent-copy"><input type="checkbox" id="transparent-copy" aria-describedby="transparent-copy-help" autocomplete="off"> 复制时附加透明导出要求</label><span id="transparent-copy-help">只影响提示词，不改变图鉴预览。</span></div>
+<div class="rail"><span class="status" id="count" aria-live="polite"></span><span id="rail-note"></span></div><div class="grid"></div><div class="empty" hidden>没有匹配的样卡。可以清空搜索或换一个分类。 <button id="reset">清除筛选</button></div>
+</main><footer>进阶手法参考：<a href="https://atlas.letz.ai/" target="_blank" rel="noopener noreferrer">VFX Atlas</a>（原创动态示意）　／　基础原版动效：<a href="https://github.com/showheyohtaki/motion-prompt" target="_blank" rel="noopener noreferrer">Motion Prompt</a> · © 2026 Shohei Ohtaki · MIT　／　编排参考：枝鸥视觉参考图鉴　／　中文卡片与用途索引：本图鉴整理　／　<a href="https://github.com/Ian-zy1/motion-atlas/blob/main/THIRD-PARTY-NOTICES.md">第三方许可</a></footer><div id="toast" role="status" hidden></div>
+<script type="application/json" id="cards">[{{catalog.cards}}]</script>
+<script>
+{{shared/motion-prompt-camera.js}}{{card/033.draw}}{{card/030.draw}}{{card/031.draw}}{{card/042.draw}}{{card/043.draw}}{{catalog.camera}}{{shared/motion-prompt-end.js}}{{shared/motion-prompt-motion.js}}{{card/005.draw}}{{catalog.motion}}{{shared/motion-prompt-end.js}}</script>
+<script type="text/plain" id="transparent-protocol">{{shared/prompt-protocol.txt}}</script>
+<script>
+{{shared/canvas-basics.js}}{{card/a107.draw}}{{card/a159.draw}}{{card/a133.draw}}{{shared/canvas-motion.js}}{{card/s09.newspaper}}{{shared/study-kit.js}}{{card/s01.draw}}{{card/s06.draw}}{{card/s04.draw}}{{card/s03.traveler}}{{card/s08.draw}}{{card/s09.skater}}{{card/s03.draw}}{{card/s09.draw}}{{catalog.renderers}}{{shared/gallery.js}}</script><script type="text/plain" id="bundled-licenses">
+{{shared/bundled-licenses.txt}}</script></body></html>
